@@ -1,0 +1,38 @@
+.heroContainer {
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh; /* Ensure the hero area has height so the video can fill it */
+}
+
+/* Video sits behind the hero content */
+.videoWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: #000;
+  height: 100%;
+}
+
+/* Make the video cover the area */
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ensure the hero content is above the video */
+.heroInner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional overlay to improve text contrast */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+  z-index: 0.5; /* sits between video (0) and content (1) */
+  pointer-events: none;
+}

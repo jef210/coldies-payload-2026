@@ -6,6 +6,8 @@ import { HighImpactHero } from '@/heros/HighImpact'
 import { LowImpactHero } from '@/heros/LowImpact'
 import { MediumImpactHero } from '@/heros/MediumImpact'
 
+import HeroVideo from './HeroVideo.client'
+
 const heroes = {
   highImpact: HighImpactHero,
   lowImpact: LowImpactHero,
@@ -21,5 +23,10 @@ export const RenderHero: React.FC<Page['hero']> = (props) => {
 
   if (!HeroToRender) return null
 
-  return <HeroToRender {...props} />
+  return (
+    <>
+      <HeroVideo />
+      <HeroToRender {...props} />
+    </>
+  )
 }
