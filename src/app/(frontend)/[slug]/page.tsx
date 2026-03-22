@@ -6,6 +6,7 @@ import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
 import { draftMode } from 'next/headers'
 import React, { cache } from 'react'
 import { homeStatic } from '@/endpoints/seed/home-static'
+import { portfolioPagesStatic } from '@/endpoints/seed/portfolio-pages-static'
 
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { RenderHero } from '@/heros/RenderHero'
@@ -56,8 +57,13 @@ export default async function Page({ params: paramsPromise }: Args) {
   })
 
   // Remove this code once your website is seeded
-  if (!page && slug === 'home') {
-    page = homeStatic
+  if (!page) {
+    const staticPages = {
+      home: homeStatic,
+      ...portfolioPagesStatic,
+    }
+
+    page = staticPages[decodedSlug as keyof typeof staticPages] || null
   }
 
   if (!page) {
@@ -67,7 +73,7 @@ export default async function Page({ params: paramsPromise }: Args) {
   const { hero, layout } = page
 
   return (
-    <article className="pt-16 pb-24">
+    <article className="pt-16 pb-24" data-page-slug={decodedSlug}>
       <PageClient />
       {/* Allows redirects for valid pages too */}
       <PayloadRedirects disableNotFound url={url} />

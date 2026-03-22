@@ -8,22 +8,16 @@ interface Props {
 }
 
 export const Logo = (props: Props) => {
-  const { loading: loadingFromProps, priority: priorityFromProps, className } = props
-
-  const loading = loadingFromProps || 'lazy'
-  const priority = priorityFromProps || 'low'
+  const { className } = props
 
   return (
-    /* eslint-disable @next/next/no-img-element */
-    <img
-      alt="Payload Logo"
-      width={193}
-      height={34}
-      loading={loading}
-      fetchPriority={priority}
-      decoding="async"
-      className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
-      src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
-    />
+    <div className={clsx('flex flex-col leading-none text-foreground', className)}>
+      <span className="text-[0.65rem] font-medium uppercase tracking-[0.42em] text-muted-foreground">
+        Jeffrey
+      </span>
+      <span className="mt-1 text-[1.15rem] font-semibold uppercase tracking-[0.28em] text-foreground md:text-[1.35rem]">
+        Malek
+      </span>
+    </div>
   )
 }

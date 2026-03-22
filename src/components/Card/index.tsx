@@ -36,6 +36,7 @@ export const Card: React.FC<{
         className,
       )}
       ref={card.ref}
+      data-reveal="up"
     >
       <div className="relative w-full ">
         {!metaImage && <div className="">No image</div>}

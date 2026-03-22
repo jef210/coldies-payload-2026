@@ -1,17 +1,18 @@
 import type { CollectionSlug, GlobalSlug, Payload, PayloadRequest, File } from 'payload'
 
-import { contactForm as contactFormData } from './contact-form'
-import { contact as contactPageData } from './contact-page'
 import { home } from './home'
 import { image1 } from './image-1'
 import { image2 } from './image-2'
 import { imageHero1 } from './image-hero-1'
+import { portfolioPagesStatic } from './portfolio-pages-static'
 import { post1 } from './post-1'
 import { post2 } from './post-2'
 import { post3 } from './post-3'
+import { defaultHeaderNavItems } from '@/utilities/defaultHeaderNavItems'
 
 const collections: CollectionSlug[] = [
   'categories',
+  'events',
   'media',
   'pages',
   'posts',
@@ -192,27 +193,71 @@ export const seed = async ({
     },
   })
 
-  payload.logger.info(`— Seeding contact form...`)
+  payload.logger.info(`— Seeding events...`)
 
-  const contactForm = await payload.create({
-    collection: 'forms',
-    depth: 0,
-    data: contactFormData,
-  })
+  const currentDate = new Date()
+  const createDateOffset = (days: number) => {
+    const date = new Date(currentDate)
+    date.setDate(date.getDate() + days)
+    return date.toISOString()
+  }
+
+  await Promise.all([
+    payload.create({
+      collection: 'events',
+      depth: 0,
+      data: {
+        title: 'Riverside Session',
+        eventDate: createDateOffset(21),
+        status: 'upcoming',
+        venue: 'The Lantern Room',
+        city: 'Nashville, TN',
+        ticketURL: 'https://example.com/tickets/riverside-session',
+        notes: 'An intimate performance featuring new material and visual projections.',
+      },
+    }),
+    payload.create({
+      collection: 'events',
+      depth: 0,
+      data: {
+        title: 'Midnight Folk Club',
+        eventDate: createDateOffset(42),
+        status: 'upcoming',
+        venue: 'The Hollow',
+        city: 'Louisville, KY',
+        ticketURL: 'https://example.com/tickets/midnight-folk-club',
+        notes: 'Placeholder date for testing the live events experience.',
+      },
+    }),
+    payload.create({
+      collection: 'events',
+      depth: 0,
+      data: {
+        title: 'Studio Preview Night',
+        eventDate: createDateOffset(-28),
+        status: 'past',
+        venue: 'Warehouse 9',
+        city: 'Cincinnati, OH',
+        notes: 'A past event placeholder to seed the archive side of the events page.',
+      },
+    }),
+  ])
 
   payload.logger.info(`— Seeding pages...`)
 
-  const [_, contactPage] = await Promise.all([
+  await Promise.all([
     payload.create({
       collection: 'pages',
       depth: 0,
       data: home({ heroImage: imageHomeDoc, metaImage: image2Doc }),
     }),
-    payload.create({
-      collection: 'pages',
-      depth: 0,
-      data: contactPageData({ contactForm: contactForm }),
-    }),
+    ...Object.values(portfolioPagesStatic).map((pageData) =>
+      payload.create({
+        collection: 'pages',
+        depth: 0,
+        data: pageData,
+      }),
+    ),
   ])
 
   payload.logger.info(`— Seeding globals...`)
@@ -221,25 +266,7 @@ export const seed = async ({
     payload.updateGlobal({
       slug: 'header',
       data: {
-        navItems: [
-          {
-            link: {
-              type: 'custom',
-              label: 'Posts',
-              url: '/posts',
-            },
-          },
-          {
-            link: {
-              type: 'reference',
-              label: 'Contact',
-              reference: {
-                relationTo: 'pages',
-                value: contactPage.id,
-              },
-            },
-          },
-        ],
+        navItems: defaultHeaderNavItems,
       },
     }),
     payload.updateGlobal({

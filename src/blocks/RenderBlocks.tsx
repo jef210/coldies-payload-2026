@@ -5,15 +5,19 @@ import type { Page } from '@/payload-types'
 import { ArchiveBlock } from '@/blocks/ArchiveBlock/Component'
 import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { ContentBlock } from '@/blocks/Content/Component'
+import { EventsPreviewBlock } from '@/blocks/EventsPreview/Component'
 import { FormBlock } from '@/blocks/Form/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component'
+import { YouTubeEmbedBlock } from '@/blocks/YouTubeEmbed/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
   content: ContentBlock,
   cta: CallToActionBlock,
+  eventsPreview: EventsPreviewBlock,
   formBlock: FormBlock,
   mediaBlock: MediaBlock,
+  youtubeEmbed: YouTubeEmbedBlock,
 }
 
 export const RenderBlocks: React.FC<{

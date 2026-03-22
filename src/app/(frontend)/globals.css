@@ -215,10 +215,381 @@
 }
 
 html {
+  scroll-behavior: smooth;
   opacity: 0;
 }
 
 html[data-theme='dark'],
 html[data-theme='light'] {
   opacity: initial;
+}
+
+body {
+  position: relative;
+  background:
+    radial-gradient(circle at top left, rgba(245, 122, 53, 0.12), transparent 26%),
+    radial-gradient(circle at 80% 20%, rgba(118, 78, 255, 0.1), transparent 30%),
+    linear-gradient(180deg, color-mix(in oklch, var(--background) 96%, black 4%), var(--background));
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: auto;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: 0.4;
+}
+
+body::before {
+  top: 8rem;
+  left: -6rem;
+  width: 18rem;
+  height: 18rem;
+  background: rgba(245, 122, 53, 0.14);
+}
+
+body::after {
+  right: -4rem;
+  top: 28rem;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(103, 80, 255, 0.14);
+}
+
+main,
+article,
+header,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.payload-richtext h1,
+.payload-richtext h2,
+.payload-richtext h3,
+.payload-richtext h4 {
+  text-wrap: balance;
+  letter-spacing: -0.03em;
+}
+
+.payload-richtext h1 {
+  font-size: clamp(2.6rem, 6vw, 6rem);
+  line-height: 0.95;
+}
+
+.payload-richtext h2 {
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  line-height: 1;
+}
+
+.payload-richtext p {
+  max-width: 62ch;
+  color: color-mix(in oklch, var(--foreground) 80%, var(--muted-foreground) 20%);
+}
+
+.payload-richtext a {
+  text-decoration-thickness: 1px;
+}
+
+article[data-page-slug='music'] {
+  padding-bottom: 8rem;
+}
+
+article[data-page-slug='music'] .payload-richtext h1 {
+  max-width: 10ch;
+}
+
+article[data-page-slug='music'] .payload-richtext h2 {
+  max-width: 12ch;
+}
+
+article[data-page-slug='music'] > .container:first-of-type,
+article[data-page-slug='music'] > section.container:first-of-type {
+  position: relative;
+}
+
+article[data-page-slug='music'] > .container:first-of-type::before,
+article[data-page-slug='music'] > section.container:first-of-type::before {
+  content: '';
+  position: absolute;
+  inset: -2rem auto auto -2rem;
+  width: 8rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(245, 122, 53, 0), rgba(245, 122, 53, 0.85));
+}
+
+article[data-page-slug='music'] .container.my-20,
+article[data-page-slug='music'] .container.my-16,
+article[data-page-slug='music'] .container.my-28 {
+  position: relative;
+}
+
+article[data-page-slug='music'] .container.my-20::after,
+article[data-page-slug='music'] .container.my-16::after,
+article[data-page-slug='music'] .container.my-28::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 -2.5rem 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+}
+
+article[data-page-slug='music'] iframe {
+  filter: saturate(0.96) contrast(1.05);
+}
+
+article[data-page-slug='music'] .payload-richtext p {
+  font-size: 1.02rem;
+}
+
+article[data-page-slug='about'] {
+  padding-bottom: 8rem;
+}
+
+article[data-page-slug='about'] .payload-richtext h1 {
+  max-width: 9ch;
+}
+
+article[data-page-slug='about'] .payload-richtext h2 {
+  max-width: 14ch;
+}
+
+article[data-page-slug='about'] .container.my-16,
+article[data-page-slug='about'] .container.my-20,
+article[data-page-slug='about'] .container.my-28 {
+  position: relative;
+}
+
+article[data-page-slug='about'] .container.my-16::before,
+article[data-page-slug='about'] .container.my-20::before,
+article[data-page-slug='about'] .container.my-28::before {
+  content: '';
+  position: absolute;
+  inset: -1.25rem auto auto 0;
+  width: 5rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(118, 78, 255, 0.72), transparent);
+}
+
+article[data-page-slug='about'] .payload-richtext h2 {
+  letter-spacing: -0.045em;
+}
+
+article[data-page-slug='about'] .payload-richtext h3 {
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+article[data-page-slug='about'] .payload-richtext p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+article[data-page-slug='about'] .container.my-16:nth-of-type(2) .payload-richtext,
+article[data-page-slug='about'] .container.my-20:nth-of-type(2) .payload-richtext,
+article[data-page-slug='about'] .container.my-28:nth-of-type(2) .payload-richtext {
+  max-width: 72rem;
+}
+
+article[data-page-slug='events'] {
+  padding-bottom: 8rem;
+}
+
+article[data-page-slug='events'] .payload-richtext h1 {
+  max-width: 9ch;
+}
+
+article[data-page-slug='events'] .payload-richtext h2 {
+  max-width: 15ch;
+}
+
+article[data-page-slug='events'] .container.my-16,
+article[data-page-slug='events'] .container.my-20,
+article[data-page-slug='events'] .container.my-28 {
+  position: relative;
+}
+
+article[data-page-slug='events'] .container.my-16::after,
+article[data-page-slug='events'] .container.my-20::after,
+article[data-page-slug='events'] .container.my-28::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 -2rem 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245, 122, 53, 0.2), transparent);
+}
+
+article[data-page-slug='events'] .payload-richtext h3 {
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+article[data-page-slug='events'] .payload-richtext p {
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+article[data-page-slug='events'] .group {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)),
+    color-mix(in oklch, var(--card) 82%, transparent);
+}
+
+article[data-page-slug='events'] .group:hover {
+  box-shadow: 0 35px 100px -52px rgba(0, 0, 0, 0.9);
+}
+
+article[data-page-slug='news'] {
+  padding-bottom: 8rem;
+}
+
+article[data-page-slug='news'] .payload-richtext h1 {
+  max-width: 8ch;
+}
+
+article[data-page-slug='news'] .payload-richtext h2 {
+  max-width: 14ch;
+}
+
+article[data-page-slug='news'] .container.my-16,
+article[data-page-slug='news'] .container.my-20,
+article[data-page-slug='news'] .container.my-28 {
+  position: relative;
+}
+
+article[data-page-slug='news'] .container.my-16::before,
+article[data-page-slug='news'] .container.my-20::before,
+article[data-page-slug='news'] .container.my-28::before {
+  content: '';
+  position: absolute;
+  inset: -1.5rem auto auto 0;
+  width: 6rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.16), transparent);
+}
+
+article[data-page-slug='news'] .payload-richtext h3 {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+article[data-page-slug='news'] .payload-richtext p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+article[data-page-slug='news'] .grid > .col-span-4 > article {
+  border-radius: 1.25rem;
+  border-color: color-mix(in oklch, var(--border) 70%, transparent);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+    color-mix(in oklch, var(--card) 84%, transparent);
+  box-shadow: 0 24px 80px -48px rgba(0, 0, 0, 0.92);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+article[data-page-slug='news'] .grid > .col-span-4 > article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 34px 90px -48px rgba(0, 0, 0, 0.98);
+  border-color: color-mix(in oklch, var(--foreground) 20%, var(--border));
+}
+
+article[data-page-slug='news'] .grid > .col-span-4 > article h3 {
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+article[data-page-slug='news'] .grid > .col-span-4 > article p {
+  color: color-mix(in oklch, var(--foreground) 72%, var(--muted-foreground) 28%);
+}
+
+article[data-page-slug='contact'] {
+  padding-bottom: 8rem;
+}
+
+article[data-page-slug='contact'] .payload-richtext h1 {
+  max-width: 8ch;
+}
+
+article[data-page-slug='contact'] .payload-richtext h2 {
+  max-width: 16ch;
+}
+
+article[data-page-slug='contact'] .container.my-16,
+article[data-page-slug='contact'] .container.my-20,
+article[data-page-slug='contact'] .container.my-28 {
+  position: relative;
+}
+
+article[data-page-slug='contact'] .container.my-16::before,
+article[data-page-slug='contact'] .container.my-20::before,
+article[data-page-slug='contact'] .container.my-28::before {
+  content: '';
+  position: absolute;
+  inset: -1.25rem auto auto 0;
+  width: 5rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(245, 122, 53, 0.48), transparent);
+}
+
+article[data-page-slug='contact'] .payload-richtext h3 {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+article[data-page-slug='contact'] .payload-richtext p {
+  font-size: 1.03rem;
+  line-height: 1.78;
+}
+
+article[data-page-slug='contact'] .container.my-16:nth-of-type(3) .payload-richtext h2,
+article[data-page-slug='contact'] .container.my-20:nth-of-type(3) .payload-richtext h2,
+article[data-page-slug='contact'] .container.my-28:nth-of-type(3) .payload-richtext h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.motion-enhanced [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 2.5rem, 0);
+  filter: blur(10px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform, filter;
+}
+
+.motion-enhanced [data-reveal='fade'] {
+  transform: translate3d(0, 1.25rem, 0) scale(0.985);
+}
+
+.motion-enhanced [data-reveal='up'].is-visible,
+.motion-enhanced [data-reveal='fade'].is-visible,
+.motion-enhanced [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
+.motion-enhanced [data-parallax-speed] {
+  transform: translate3d(0, var(--parallax-offset, 0px), 0);
+  will-change: transform;
+}
+
+.reduced-motion [data-reveal],
+.reduced-motion [data-parallax-speed] {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  transition: none !important;
 }

@@ -1,87 +1,40 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import styles from './heroVideo.module.css'
 
 export default function HeroVideo() {
-  const videoRef = useRef<HTMLVideoElement | null>(null)
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log('HeroVideo (DEBUG) mounted — setting up listeners')
-    const v = videoRef.current
-    if (!v) {
-      // eslint-disable-next-line no-console
-      console.log('HeroVideo: no video element found yet')
-      return
-    }
-
-    const onLoadedMeta = () => {
-      // eslint-disable-next-line no-console
-      console.log('video loadedmetadata:', { videoWidth: v.videoWidth, videoHeight: v.videoHeight, duration: v.duration })
-    }
-    const onLoadedData = () => {
-      // eslint-disable-next-line no-console
-      console.log('video loadeddata, readyState:', v.readyState)
-    }
-    const onPlay = () => {
-      // eslint-disable-next-line no-console
-      console.log('video play event (playing?). paused:', v.paused)
-    }
-    const onError = (ev: any) => {
-      // eslint-disable-next-line no-console
-      console.error('video error event', ev, v.error)
-    }
-    const onStalled = () => {
-      // eslint-disable-next-line no-console
-      console.warn('video stalled')
-    }
-
-    v.addEventListener('loadedmetadata', onLoadedMeta)
-    v.addEventListener('loadeddata', onLoadedData)
-    v.addEventListener('play', onPlay)
-    v.addEventListener('error', onError)
-    v.addEventListener('stalled', onStalled)
-
-    // Try to call play() to see any autoplay errors
-    v.play().then(() => {
-      // eslint-disable-next-line no-console
-      console.log('video.play() succeeded (promise resolved)')
-    }).catch((err) => {
-      // eslint-disable-next-line no-console
-      console.warn('video.play() rejected:', err)
-    })
-
-    return () => {
-      v.removeEventListener('loadedmetadata', onLoadedMeta)
-      v.removeEventListener('loadeddata', onLoadedData)
-      v.removeEventListener('play', onPlay)
-      v.removeEventListener('error', onError)
-      v.removeEventListener('stalled', onStalled)
-    }
+    if (typeof window === 'undefined' || !window.matchMedia) return
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setPrefersReducedMotion(Boolean(mq.matches))
+    const handler = (ev: MediaQueryListEvent) => setPrefersReducedMotion(Boolean(ev.matches))
+    mq.addEventListener?.('change', handler) ?? mq.addListener(handler)
+    return () => mq.removeEventListener?.('change', handler) ?? mq.removeListener(handler)
   }, [])
 
-  // Using a small reliable sample video from MDN
-  const TEST_VIDEO = 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
-  const POSTER_URL = 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder'
+  const MOUNTAINS_VIDEO_URL = '/video/mountains.mp4' // or a validated external .mp4 URL
+  if (prefersReducedMotion || pathname !== '/') return null
 
   return (
-    <div className={styles.heroContainer} style={{ outline: '3px solid rgba(255,0,0,0.6)' }}>
-      <div className={styles.videoWrap} aria-hidden="true" style={{ opacity: 0.98 }}>
+    <div className={styles.heroContainer} data-reveal="fade">
+      <div className={styles.videoWrap} aria-hidden="true" data-parallax-speed="0.08">
         <video
-          ref={videoRef}
           className={styles.video}
-          src={TEST_VIDEO}
-          poster={POSTER_URL}
+          src={MOUNTAINS_VIDEO_URL}
+          poster="/images/hero-poster.jpg"
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
-          controls
-          style={{ maxHeight: '60vh', width: '100%' }}
         />
       </div>
+      <div className={styles.heroOverlay} aria-hidden="true" />
     </div>
   )
 }
