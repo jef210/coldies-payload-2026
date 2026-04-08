@@ -80,7 +80,8 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
     },
   },
   meta: {
-    description: 'Jeffrey Malek portfolio featuring music, immersive visuals, events, and news.',
+    description:
+      'Official site of Jeffrey Malek — modern folk rock, cinematic visuals, live dates, and field notes.',
     title: 'Jeffrey Malek',
   },
   title: 'Home',
@@ -103,7 +104,7 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
                       format: 0,
                       mode: 'normal',
                       style: '',
-                      text: 'Modern folk rock energy, visual texture, and a cinematic digital presence.',
+                      text: 'Songs, visuals, and atmosphere built as one connected world.',
                       version: 1,
                     },
                   ],
@@ -122,7 +123,7 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
                       format: 0,
                       mode: 'normal',
                       style: '',
-                      text: 'This homepage is structured as a narrative landing experience with featured music, live dates, and journal updates. Swap each placeholder section with your real content as it develops.',
+                      text: 'This is the central landing space for new music, upcoming performances, and studio journal entries. Every section is designed to keep the story moving between releases.',
                       version: 1,
                     },
                   ],
@@ -147,13 +148,12 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
       heading: 'Featured Music',
       videoId: 'ysz5S6PUM-U',
       caption:
-        'Placeholder embed for early music direction. Replace this with your own track, session, or teaser as soon as it is ready.',
+        'Start here with the strongest introduction to the sound — a session clip, single, or short visual performance.',
     },
     {
       blockType: 'eventsPreview',
       heading: 'Upcoming Events',
-      description:
-        'Start adding manual events in Payload now so this section becomes your live performance hub.',
+      description: 'Upcoming live dates, listening sessions, and special appearances.',
       status: 'upcoming',
       limit: 3,
     },
@@ -191,7 +191,7 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: 'Use posts for behind-the-scenes notes, release updates, works in progress, and announcements.',
+                  text: 'Field notes from the studio, release updates, and behind-the-scenes dispatches.',
                   version: 1,
                 },
               ],

@@ -1,8 +1,21 @@
 .heroContainer {
   position: relative;
   overflow: hidden;
-  min-height: clamp(28rem, 78vh, 56rem);
+  min-height: clamp(24rem, 68vh, 50rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at top left, rgba(245, 122, 53, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(10, 14, 24, 0.62), rgba(8, 12, 20, 0.92));
+}
+
+.fallbackBackdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(245, 122, 53, 0.22), transparent 18%),
+    radial-gradient(circle at 78% 24%, rgba(118, 78, 255, 0.16), transparent 20%),
+    linear-gradient(180deg, rgba(20, 32, 52, 0.7), rgba(8, 12, 20, 0.96));
 }
 
 .videoWrap {
@@ -22,6 +35,10 @@
   object-fit: cover;
   display: block;
   filter: saturate(1.05) contrast(1.05);
+}
+
+.videoHidden {
+  opacity: 0;
 }
 
 .heroInner {

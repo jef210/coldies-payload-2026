@@ -17,7 +17,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText 
 
   return (
     <div
-      className="relative -mt-[10.4rem] flex min-h-[88vh] items-center justify-center overflow-hidden text-white"
+      className="page-hero-shell page-hero-shell--center relative flex min-h-[88vh] items-center justify-center overflow-hidden text-white"
       data-theme="dark"
     >
       <div
@@ -25,6 +25,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText 
         data-reveal="up"
       >
         <div className="max-w-[36.5rem] md:text-center">
+          <div aria-hidden className="page-hero-divider" />
           {richText && <RichText className="mb-6" data={richText} enableGutter={false} />}
           {Array.isArray(links) && links.length > 0 && (
             <ul className="flex md:justify-center gap-4">

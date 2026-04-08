@@ -37,6 +37,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           />
 
           <Header />
+          <div aria-hidden className="h-[var(--site-header-offset)] shrink-0" />
           {children}
           <Footer />
         </Providers>

@@ -87,6 +87,7 @@
 }
 
 :root {
+  --site-header-offset: clamp(6.1rem, 8vw, 7.1rem);
   --background: oklch(100% 0 0deg);
   --foreground: oklch(14.5% 0 0deg);
   --card: oklch(96.5% 0.005 265deg);
@@ -262,7 +263,6 @@ body::after {
 
 main,
 article,
-header,
 footer {
   position: relative;
   z-index: 1;
@@ -295,6 +295,28 @@ footer {
   text-decoration-thickness: 1px;
 }
 
+.page-hero-shell {
+  position: relative;
+  padding-top: clamp(1.35rem, 2.4vw, 2.1rem);
+}
+
+.page-hero-divider {
+  display: block;
+  width: clamp(5.5rem, 14vw, 8.5rem);
+  height: 2px;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, rgba(245, 122, 53, 0.82), rgba(118, 78, 255, 0.42), transparent);
+  opacity: 0.95;
+  box-shadow: 0 0 24px rgba(245, 122, 53, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero-shell--center .page-hero-divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 article[data-page-slug='music'] {
   padding-bottom: 8rem;
 }
@@ -312,8 +334,8 @@ article[data-page-slug='music'] > section.container:first-of-type {
   position: relative;
 }
 
-article[data-page-slug='music'] > .container:first-of-type::before,
-article[data-page-slug='music'] > section.container:first-of-type::before {
+article[data-page-slug='music'] > .container:first-of-type:not(.page-hero-shell)::before,
+article[data-page-slug='music'] > section.container:first-of-type:not(.page-hero-shell)::before {
   content: '';
   position: absolute;
   inset: -2rem auto auto -2rem;

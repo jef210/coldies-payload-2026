@@ -8,8 +8,9 @@ import RichText from '@/components/RichText'
 
 export const MediumImpactHero: React.FC<Page['hero']> = ({ links, media, richText }) => {
   return (
-    <div className="mb-20">
-      <div className="container mb-10 pt-8 md:pt-12" data-reveal="up">
+    <div className="page-hero-shell mb-20">
+      <div className="container mb-10" data-reveal="up">
+        <div aria-hidden className="page-hero-divider" />
         {richText && <RichText className="mb-6" data={richText} enableGutter={false} />}
 
         {Array.isArray(links) && links.length > 0 && (

@@ -71,11 +71,12 @@ export const portfolioPagesStatic: Record<
     title: 'Music',
     hero: createLowImpactHero(
       'Music',
-      'Listen to placeholder tracks, embedded sessions, and evolving sonic sketches while the full catalog takes shape.',
+      'Sessions, singles in progress, and visual performances from the Jeffrey Malek project.',
     ),
     meta: {
       title: 'Music',
-      description: 'Placeholder tracks, featured videos, and sonic direction from Jeffrey Malek.',
+      description:
+        'Featured performances, studio sessions, and release updates from Jeffrey Malek.',
     },
     layout: [
       {
@@ -86,7 +87,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Current Direction'),
               createParagraph(
-                'The music page should feel like a living listening room: part journal, part screening room, part release environment. For now, it can hold demos, session videos, and early sketches while the finished catalog is still coming together.',
+                'This page is a living listening room: part studio journal, part screening room, part release runway. It is where new material appears first and where returning listeners can follow how the sound evolves.',
               ),
             ]),
           },
@@ -95,7 +96,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Now Building', 'h3'),
               createParagraph(
-                'Folk rock foundations, cinematic textures, warm acoustic detail, and visual storytelling built for motion-heavy presentation.',
+                'Modern folk-rock foundations, cinematic textures, warm acoustic detail, and visual storytelling designed to be felt as much as heard.',
               ),
             ]),
           },
@@ -106,7 +107,7 @@ export const portfolioPagesStatic: Record<
         heading: 'Featured Session',
         videoId: 'ysz5S6PUM-U',
         caption:
-          'Use this first feature slot for the strongest introduction to your sound — a finished single, live room performance, or short concept video.',
+          'Lead with the clearest statement of the sound: a finished single, live-room take, or a short concept performance.',
       },
       {
         blockType: 'content',
@@ -116,7 +117,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Listening Notes', 'h3'),
               createParagraph(
-                'Pair each embed with story fragments: where it came from, what season it belongs to, what visual language surrounds it, or where it sits in your larger body of work.',
+                'Pair each release with context: where it came from, what season it belongs to, and how it connects to the larger visual world of the project.',
               ),
             ]),
           },
@@ -125,7 +126,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Release Pipeline', 'h3'),
               createParagraph(
-                'Later, this page can expand into singles, albums, lyrics, credits, and streaming links. For v1, we are building mood, structure, and a compelling place for people to return to.',
+                'Over time this page expands into singles, full releases, credits, lyrics, and streaming destinations. For now, it establishes rhythm and a reason to come back.',
               ),
             ]),
           },
@@ -136,14 +137,14 @@ export const portfolioPagesStatic: Record<
         heading: 'Alternate Performance',
         videoId: 'ScMzIvxBSi4',
         caption:
-          'Keep secondary performances or rough-cut material in a modular stack so this page can evolve without redesigning the whole layout.',
+          'Use this slot for alternate arrangements, acoustic versions, or work-in-progress recordings that deepen the story.',
       },
       {
         blockType: 'youtubeEmbed',
         heading: 'Visual Teaser',
         videoId: 'dQw4w9WgXcQ',
         caption:
-          'This slot can become a teaser, lyric visual, or mood film that links the music and artwork sides of the portfolio together.',
+          'Reserve this area for a teaser, lyric visual, or short mood film that connects music and artwork.',
       },
     ],
   },
@@ -153,7 +154,7 @@ export const portfolioPagesStatic: Record<
     title: 'About',
     hero: createLowImpactHero(
       'About',
-      'A modern folk rock world built from music, visuals, motion, and immersive storytelling.',
+      'An artist project built through songs, visuals, and immersive storytelling.',
     ),
     meta: {
       title: 'About',
@@ -168,7 +169,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Identity', 'h3'),
               createParagraph(
-                'Modern. Folk-rooted. Cinematic. This page should feel like a statement of atmosphere as much as biography.',
+                'Modern. Folk-rooted. Cinematic. A voice shaped by atmosphere as much as biography.',
               ),
             ]),
           },
@@ -177,10 +178,10 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('The Story'),
               createParagraph(
-                'Jeffrey Malek is building a body of work that moves between songcraft, visual language, and immersive digital presentation. The goal is not just to release songs, but to create a world around them — textured, vibrant, and emotionally direct.',
+                'Jeffrey Malek is building a body of work that moves between songcraft, visual language, and immersive digital presentation. The aim is not only to release songs, but to create a world around them — textured, vibrant, and emotionally direct.',
               ),
               createParagraph(
-                'This space can eventually hold the real arc: where the music began, what shaped it, the visual influences behind it, and the tension between intimacy and spectacle that drives the project forward.',
+                'This page traces the arc behind the music: the influences, the environments, and the ongoing balance between intimacy and scale that drives the work forward.',
               ),
             ]),
           },
@@ -205,7 +206,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Influences', 'h3'),
               createParagraph(
-                'Use this section for the artists, records, films, places, and visual moods that inform the work. Think less résumé, more constellation map.',
+                'Artists, records, films, landscapes, and visual language that shape the project. Less résumé, more constellation map.',
               ),
             ]),
           },
@@ -214,7 +215,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Creative Direction', 'h3'),
               createParagraph(
-                'The site is being shaped as a hybrid portfolio: music, motion, artwork, live dates, and process notes all living in one consistent visual system.',
+                'The site is designed as a hybrid portfolio where music, motion, artwork, live dates, and process notes share one visual system.',
               ),
             ]),
           },
@@ -228,7 +229,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('What Comes Next'),
               createParagraph(
-                'As the project grows, this page can expand into deeper biographical writing, selected press, collaborator features, and visual documentation. For now, it should establish tone, intent, and a sense that everything on the site belongs to the same universe.',
+                'As the catalog grows, this page expands into deeper biographical writing, selected press, collaborator features, and visual documentation. For now, it sets tone, intent, and a clear sense of authorship.',
               ),
             ]),
           },
@@ -242,7 +243,7 @@ export const portfolioPagesStatic: Record<
     title: 'Events',
     hero: createLowImpactHero(
       'Events',
-      'A live calendar for upcoming shows, pop-ups, listening sessions, and future touring announcements.',
+      'Upcoming shows, listening sessions, and live announcements.',
     ),
     meta: {
       title: 'Events',
@@ -257,7 +258,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Live Presence'),
               createParagraph(
-                'This page should function as both a calendar and a mood board for live performance. It is where upcoming shows, special appearances, listening events, and future touring moments begin to gather energy.',
+                'This page functions as both calendar and signal flare for live performance — upcoming shows, special appearances, listening events, and future touring moments.',
               ),
             ]),
           },
@@ -266,7 +267,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Current Mode', 'h3'),
               createParagraph(
-                'Manual scheduling for now, with room to grow later into ticketing integrations, archives, and richer venue storytelling.',
+                'Manual scheduling for now, with room to grow into ticketing integrations, city guides, and richer venue context.',
               ),
             ]),
           },
@@ -275,8 +276,7 @@ export const portfolioPagesStatic: Record<
       {
         blockType: 'eventsPreview',
         heading: 'Upcoming Events',
-        description:
-          'Add live dates in Payload to turn this into your main performance hub. Keep the top of this page current and high-energy.',
+        description: 'The next live moments — keep this section current and easy to scan.',
         status: 'upcoming',
         limit: 6,
       },
@@ -288,7 +288,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('What to Expect', 'h3'),
               createParagraph(
-                'Use this space later for short notes on the live experience: solo sets, full-band arrangements, visuals, venue atmosphere, or what listeners can expect from a given run of performances.',
+                'Use this area for short notes on live format: solo sets, full-band arrangements, visual elements, and what listeners can expect from a run of dates.',
               ),
             ]),
           },
@@ -297,7 +297,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Booking & Appearances', 'h3'),
               createParagraph(
-                'Eventually this can expand to include booking details, festival appearances, residency announcements, and one-off creative collaborations.',
+                'Expand this section with booking details, festival announcements, residencies, and one-off creative collaborations.',
               ),
             ]),
           },
@@ -306,8 +306,7 @@ export const portfolioPagesStatic: Record<
       {
         blockType: 'eventsPreview',
         heading: 'Past Events',
-        description:
-          'Archive your performances and appearances here so the live side of the project starts to feel documented and real over time.',
+        description: 'An archive of performances and appearances across seasons.',
         status: 'past',
         limit: 6,
       },
@@ -330,7 +329,7 @@ export const portfolioPagesStatic: Record<
     title: 'News',
     hero: createLowImpactHero(
       'News',
-      'Updates, behind-the-scenes notes, announcements, and progress posts from the studio and beyond.',
+      'Studio updates, release notes, and behind-the-scenes dispatches.',
     ),
     meta: {
       title: 'News',
@@ -345,7 +344,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Field Notes'),
               createParagraph(
-                'This page should feel like a running document of the project — release notes, process fragments, visual experiments, studio updates, and moments that give shape to the larger world around the music.',
+                'A running document of the project: release notes, process fragments, visual experiments, studio updates, and moments that shape the larger world around the music.',
               ),
             ]),
           },
@@ -354,7 +353,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Purpose', 'h3'),
               createParagraph(
-                'Less blog, more journal. Use it to keep the site alive between major releases and performances.',
+                'Less blog, more journal — a way to keep the site alive between major releases and performances.',
               ),
             ]),
           },
@@ -365,7 +364,7 @@ export const portfolioPagesStatic: Record<
         introContent: createRichText([
           createHeading('Latest Posts'),
           createParagraph(
-            'Turn posts into a running journal for releases, works in progress, process notes, and announcements.',
+            'A chronological feed of releases, works in progress, process notes, and announcements.',
           ),
         ]),
         populateBy: 'collection',
@@ -389,10 +388,7 @@ export const portfolioPagesStatic: Record<
     slug: 'contact',
     _status: 'published',
     title: 'Contact',
-    hero: createLowImpactHero(
-      'Contact',
-      'For now, use this page as a contact landing space until email and forms are fully wired in.',
-    ),
+    hero: createLowImpactHero('Contact', 'Booking, collaboration, and direct contact information.'),
     meta: {
       title: 'Contact',
       description: 'Contact and connect with Jeffrey Malek.',
@@ -406,7 +402,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Open Lines'),
               createParagraph(
-                'This page should feel like an invitation into the project — simple, direct, and intentional. Until email infrastructure is wired in, it can serve as a calm landing space for booking, collaboration, and general contact details.',
+                'A direct invitation into the project: simple, intentional, and clear. Use this space for booking inquiries, collaborations, and general contact details.',
               ),
             ]),
           },
@@ -415,7 +411,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Current Setup', 'h3'),
               createParagraph(
-                'Contact form delivery comes later. For now, this page establishes tone and gives clear paths for connection.',
+                'Form delivery can be added next. For v1, this page should still provide clear paths for connection.',
               ),
             ]),
           },
@@ -429,7 +425,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('For Booking', 'h3'),
               createParagraph(
-                'Reserve this area for performance inquiries, festival opportunities, collaborations, and creative partnerships.',
+                'Use this section for performance inquiries, festival opportunities, and creative partnerships.',
               ),
             ]),
           },
@@ -438,7 +434,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('For General Contact', 'h3'),
               createParagraph(
-                'Use this space for your preferred email, manager details, or a short note directing visitors to the best way to reach you.',
+                'List your preferred email, management contact, or a short note directing visitors to the fastest way to reach you.',
               ),
             ]),
           },
@@ -463,7 +459,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Where to Connect'),
               createParagraph(
-                'Later this can become a richer contact hub with real social links, press kit downloads, mailing list entry points, and a form that routes submissions cleanly. For v1, it should still feel authored and welcoming.',
+                'Later this can grow into a richer hub with social links, press kit downloads, mailing-list entry points, and a routed contact form. For now, keep it authored and welcoming.',
               ),
             ]),
           },
