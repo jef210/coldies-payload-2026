@@ -71,12 +71,11 @@ export const portfolioPagesStatic: Record<
     title: 'Music',
     hero: createLowImpactHero(
       'Music',
-      'Sessions, singles in progress, and visual performances from the Jeffrey Malek project.',
+      'Original music, production work, and works in progress from Jeffrey Malek.',
     ),
     meta: {
       title: 'Music',
-      description:
-        'Featured performances, studio sessions, and release updates from Jeffrey Malek.',
+      description: 'Original music, production services, and studio updates from Jeffrey Malek.',
     },
     layout: [
       {
@@ -87,16 +86,16 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Current Direction'),
               createParagraph(
-                'This page is a living listening room: part studio journal, part screening room, part release runway. It is where new material appears first and where returning listeners can follow how the sound evolves.',
+                'Jeffrey’s original music lives somewhere between blues, jazz, folk, and rock, with a loose human feel, a love for groove, and songs that aim to move people emotionally and spiritually. It is music built with personality, curiosity, and room to breathe.',
               ),
             ]),
           },
           {
             size: 'oneThird',
             richText: createRichText([
-              createHeading('Now Building', 'h3'),
+              createHeading('Sound', 'h3'),
               createParagraph(
-                'Modern folk-rock foundations, cinematic textures, warm acoustic detail, and visual storytelling designed to be felt as much as heard.',
+                'Think Beck and David Byrne filtered through funky jazz-blues, folk songwriting, and a modern production ear.',
               ),
             ]),
           },
@@ -107,7 +106,7 @@ export const portfolioPagesStatic: Record<
         heading: 'Featured Session',
         videoId: 'ysz5S6PUM-U',
         caption:
-          'Lead with the clearest statement of the sound: a finished single, live-room take, or a short concept performance.',
+          'Feature a finished song, stripped-down session, or live-room take that gives listeners a clear first impression of Jeffrey’s original sound.',
       },
       {
         blockType: 'content',
@@ -115,18 +114,18 @@ export const portfolioPagesStatic: Record<
           {
             size: 'half',
             richText: createRichText([
-              createHeading('Listening Notes', 'h3'),
+              createHeading('Production Services', 'h3'),
               createParagraph(
-                'Pair each release with context: where it came from, what season it belongs to, and how it connects to the larger visual world of the project.',
+                'Jeffrey offers beat-making, full production, mixing, mastering, songwriting support, and other creative production services for indie artists and collaborative projects.',
               ),
             ]),
           },
           {
             size: 'half',
             richText: createRichText([
-              createHeading('Release Pipeline', 'h3'),
+              createHeading('How Projects Start', 'h3'),
               createParagraph(
-                'Over time this page expands into singles, full releases, credits, lyrics, and streaming destinations. For now, it establishes rhythm and a reason to come back.',
+                'Most work begins with a conversation about scope, sound, and what the music needs. Pricing is based on the project, and Jeffrey is happy to talk through ideas before anything gets too formal.',
               ),
             ]),
           },
@@ -134,17 +133,17 @@ export const portfolioPagesStatic: Record<
       },
       {
         blockType: 'youtubeEmbed',
-        heading: 'Alternate Performance',
+        heading: 'Studio or Live Preview',
         videoId: 'ScMzIvxBSi4',
         caption:
-          'Use this slot for alternate arrangements, acoustic versions, or work-in-progress recordings that deepen the story.',
+          'Use this slot for an alternate arrangement, a demo in progress, or a live version that shows another side of the songs.',
       },
       {
         blockType: 'youtubeEmbed',
-        heading: 'Visual Teaser',
+        heading: 'What’s Coming Next',
         videoId: 'dQw4w9WgXcQ',
         caption:
-          'Reserve this area for a teaser, lyric visual, or short mood film that connects music and artwork.',
+          'Jeffrey is currently finishing his first album, so this space can become a teaser, announcement, or early look at the next release.',
       },
     ],
   },
@@ -154,11 +153,12 @@ export const portfolioPagesStatic: Record<
     title: 'About',
     hero: createLowImpactHero(
       'About',
-      'An artist project built through songs, visuals, and immersive storytelling.',
+      'A creative, eclectic musician with a deep love for songs, people, and performance.',
     ),
     meta: {
       title: 'About',
-      description: 'Artist story, influences, visual approach, and creative direction.',
+      description:
+        'Artist story, influences, experience, and teaching philosophy for Jeffrey Malek.',
     },
     layout: [
       {
@@ -169,7 +169,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Identity', 'h3'),
               createParagraph(
-                'Modern. Folk-rooted. Cinematic. A voice shaped by atmosphere as much as biography.',
+                'Creative, funny, easygoing, and serious about making meaningful music with other people.',
               ),
             ]),
           },
@@ -178,10 +178,10 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('The Story'),
               createParagraph(
-                'Jeffrey Malek is building a body of work that moves between songcraft, visual language, and immersive digital presentation. The aim is not only to release songs, but to create a world around them — textured, vibrant, and emotionally direct.',
+                'Jeffrey Malek is a Denver and Boulder area musician who has been performing professionally since 2000. Over the years he has played a wide range of styles including classical, rap, country, rock, folk, jazz, and more, bringing those influences into an approach that feels both grounded and open-minded.',
               ),
               createParagraph(
-                'This page traces the arc behind the music: the influences, the environments, and the ongoing balance between intimacy and scale that drives the work forward.',
+                'He holds a music degree from Fort Lewis College with an emphasis in classical guitar, and while he rarely performs classical repertoire now, that training still shapes his touch, technique, and musicality. Whether on stage, in the studio, or teaching, Jeffrey aims to make music that inspires people and leaves room for joy.',
               ),
             ]),
           },
@@ -193,7 +193,7 @@ export const portfolioPagesStatic: Record<
           {
             size: 'full',
             richText: createRichText([
-              createHeading('“Build the world, then let the songs live inside it.”', 'h2'),
+              createHeading('“Make music that feels human, honest, and alive.”', 'h2'),
             ]),
           },
         ],
@@ -206,16 +206,16 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Influences', 'h3'),
               createParagraph(
-                'Artists, records, films, landscapes, and visual language that shape the project. Less résumé, more constellation map.',
+                'Jeffrey’s musical world has been shaped by Beck, David Byrne, MF DOOM, The Beatles, John Scofield, Grant Green, and many other artists who balance craft, personality, and originality.',
               ),
             ]),
           },
           {
             size: 'half',
             richText: createRichText([
-              createHeading('Creative Direction', 'h3'),
+              createHeading('Teaching Style', 'h3'),
               createParagraph(
-                'The site is designed as a hybrid portfolio where music, motion, artwork, live dates, and process notes share one visual system.',
+                'Jeffrey teaches guitar, bass, voice, production, theory, songwriting, rhythm, and ensemble skills with a holistic approach. Instead of only teaching songs or riffs, he helps students understand how music works so they can grow into creative, confident musicians.',
               ),
             ]),
           },
@@ -227,9 +227,9 @@ export const portfolioPagesStatic: Record<
           {
             size: 'twoThirds',
             richText: createRichText([
-              createHeading('What Comes Next'),
+              createHeading('Lessons & Creative Work'),
               createParagraph(
-                'As the catalog grows, this page expands into deeper biographical writing, selected press, collaborator features, and visual documentation. For now, it sets tone, intent, and a clear sense of authorship.',
+                'Jeffrey works with students of all ages and levels, both online and in person, and also offers production support for artists who want thoughtful collaboration. The goal in every setting is the same: make the process feel welcoming, musical, and genuinely human.',
               ),
             ]),
           },
@@ -243,11 +243,12 @@ export const portfolioPagesStatic: Record<
     title: 'Events',
     hero: createLowImpactHero(
       'Events',
-      'Upcoming shows, listening sessions, and live announcements.',
+      'Live music for bars, private events, community spaces, and more.',
     ),
     meta: {
       title: 'Events',
-      description: 'Upcoming and past events for Jeffrey Malek.',
+      description:
+        'Live performance details, upcoming shows, and booking information for Jeffrey Malek and The Coldies.',
     },
     layout: [
       {
@@ -258,16 +259,16 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Live Presence'),
               createParagraph(
-                'This page functions as both calendar and signal flare for live performance — upcoming shows, special appearances, listening events, and future touring moments.',
+                'Jeffrey performs in a range of settings, from bars and private events to assisted living communities and local venues. His goal is to meet the room, bring people in, and make every performance feel warm, personal, and alive.',
               ),
             ]),
           },
           {
             size: 'oneThird',
             richText: createRichText([
-              createHeading('Current Mode', 'h3'),
+              createHeading('Formats', 'h3'),
               createParagraph(
-                'Manual scheduling for now, with room to grow into ticketing integrations, city guides, and richer venue context.',
+                'Solo sets usually run 1–2 hours with voice, guitar, and loop pedal. Full-band shows with The Coldies usually run around 3 hours and lean into blues and rock.',
               ),
             ]),
           },
@@ -276,7 +277,7 @@ export const portfolioPagesStatic: Record<
       {
         blockType: 'eventsPreview',
         heading: 'Upcoming Events',
-        description: 'The next live moments — keep this section current and easy to scan.',
+        description: 'Upcoming solo shows, band dates, and appearances around Colorado and beyond.',
         status: 'upcoming',
         limit: 6,
       },
@@ -288,7 +289,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('What to Expect', 'h3'),
               createParagraph(
-                'Use this area for short notes on live format: solo sets, full-band arrangements, visual elements, and what listeners can expect from a run of dates.',
+                'Jeffrey’s cover repertoire includes songs by The Beatles, A.C. Jobim, Beck, Talking Heads, Robert Earl Keen, and Frank Sinatra, shaped to fit the room and the audience.',
               ),
             ]),
           },
@@ -297,7 +298,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Booking & Appearances', 'h3'),
               createParagraph(
-                'Expand this section with booking details, festival announcements, residencies, and one-off creative collaborations.',
+                'Jeffrey is open to a wide range of venues and events. For bookings, private events, or questions about the right format for your space, use the contact page or reach out through Facebook for now.',
               ),
             ]),
           },
@@ -316,7 +317,7 @@ export const portfolioPagesStatic: Record<
           {
             size: 'full',
             richText: createRichText([
-              createHeading('Every show should feel like part of the same world.', 'h2'),
+              createHeading('Every show should feel welcoming, musical, and memorable.', 'h2'),
             ]),
           },
         ],
@@ -329,11 +330,12 @@ export const portfolioPagesStatic: Record<
     title: 'News',
     hero: createLowImpactHero(
       'News',
-      'Studio updates, release notes, and behind-the-scenes dispatches.',
+      'Studio updates, release notes, teaching thoughts, and behind-the-scenes dispatches.',
     ),
     meta: {
       title: 'News',
-      description: 'Latest posts and updates from Jeffrey Malek.',
+      description:
+        'Latest posts and updates from Jeffrey Malek across music, performance, and teaching.',
     },
     layout: [
       {
@@ -344,7 +346,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Field Notes'),
               createParagraph(
-                'A running document of the project: release notes, process fragments, visual experiments, studio updates, and moments that shape the larger world around the music.',
+                'This is where Jeffrey can share updates from the studio, notes on songs in progress, stories from performances, teaching ideas, and the little moments that shape the larger creative picture.',
               ),
             ]),
           },
@@ -353,7 +355,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Purpose', 'h3'),
               createParagraph(
-                'Less blog, more journal — a way to keep the site alive between major releases and performances.',
+                'Less formal blog, more honest running journal — a simple way to keep listeners, students, and collaborators connected between bigger milestones.',
               ),
             ]),
           },
@@ -364,7 +366,7 @@ export const portfolioPagesStatic: Record<
         introContent: createRichText([
           createHeading('Latest Posts'),
           createParagraph(
-            'A chronological feed of releases, works in progress, process notes, and announcements.',
+            'A chronological feed of releases, works in progress, live updates, teaching reflections, and announcements.',
           ),
         ]),
         populateBy: 'collection',
@@ -377,7 +379,7 @@ export const portfolioPagesStatic: Record<
           {
             size: 'full',
             richText: createRichText([
-              createHeading('Keep the archive alive, even between big moments.', 'h2'),
+              createHeading('Keep the conversation going, even between big moments.', 'h2'),
             ]),
           },
         ],
@@ -388,10 +390,14 @@ export const portfolioPagesStatic: Record<
     slug: 'contact',
     _status: 'published',
     title: 'Contact',
-    hero: createLowImpactHero('Contact', 'Booking, collaboration, and direct contact information.'),
+    hero: createLowImpactHero(
+      'Contact',
+      'Booking, lessons, collaboration, and direct contact information.',
+    ),
     meta: {
       title: 'Contact',
-      description: 'Contact and connect with Jeffrey Malek.',
+      description:
+        'Contact Jeffrey Malek for booking, lessons, production work, and collaborations.',
     },
     layout: [
       {
@@ -402,16 +408,16 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Open Lines'),
               createParagraph(
-                'A direct invitation into the project: simple, intentional, and clear. Use this space for booking inquiries, collaborations, and general contact details.',
+                'Use this page for booking inquiries, lesson requests, production conversations, and general questions. The goal is simple: make it easy to start a conversation and figure out what might be a good fit.',
               ),
             ]),
           },
           {
             size: 'oneThird',
             richText: createRichText([
-              createHeading('Current Setup', 'h3'),
+              createHeading('Best Way to Reach Out', 'h3'),
               createParagraph(
-                'Form delivery can be added next. For v1, this page should still provide clear paths for connection.',
+                'For now, the best options are the contact form and Facebook. A direct email address at info@jeffreymalek.com is planned as the site setup is finalized.',
               ),
             ]),
           },
@@ -425,16 +431,16 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('For Booking', 'h3'),
               createParagraph(
-                'Use this section for performance inquiries, festival opportunities, and creative partnerships.',
+                'Reach out about solo performances, bookings with The Coldies, private events, assisted living performances, or other live opportunities.',
               ),
             ]),
           },
           {
             size: 'half',
             richText: createRichText([
-              createHeading('For General Contact', 'h3'),
+              createHeading('For Lessons & Production', 'h3'),
               createParagraph(
-                'List your preferred email, management contact, or a short note directing visitors to the fastest way to reach you.',
+                'Jeffrey also welcomes inquiries about music lessons, songwriting help, production, mixing, mastering, and creative collaboration. Pricing depends on the project or lesson plan.',
               ),
             ]),
           },
@@ -445,9 +451,7 @@ export const portfolioPagesStatic: Record<
         columns: [
           {
             size: 'full',
-            richText: createRichText([
-              createHeading('Instagram · YouTube · Spotify · Bandcamp', 'h2'),
-            ]),
+            richText: createRichText([createHeading('Facebook · Contact Form · Email Soon', 'h2')]),
           },
         ],
       },
@@ -459,7 +463,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Where to Connect'),
               createParagraph(
-                'Later this can grow into a richer hub with social links, press kit downloads, mailing-list entry points, and a routed contact form. For now, keep it authored and welcoming.',
+                'As the site grows, this can become a richer hub with additional social links, a press kit, and direct email support. For now, keeping it simple and welcoming is the right move.',
               ),
             ]),
           },
