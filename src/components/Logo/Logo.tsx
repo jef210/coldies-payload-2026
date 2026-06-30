@@ -13,10 +13,10 @@ export const Logo = (props: Props) => {
   return (
     <div className={clsx('flex flex-col leading-none text-foreground', className)}>
       <span className="text-[0.65rem] font-medium uppercase tracking-[0.42em] text-muted-foreground">
-        Jeffrey
+        The
       </span>
       <span className="mt-1 text-[1.15rem] font-semibold uppercase tracking-[0.28em] text-foreground md:text-[1.35rem]">
-        Malek
+        Coldies
       </span>
     </div>
   )
