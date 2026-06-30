@@ -71,11 +71,12 @@ export const portfolioPagesStatic: Record<
     title: 'Music',
     hero: createLowImpactHero(
       'Music',
-      'Original music, production work, and works in progress from Jeffrey Malek.',
+      'Ice core samples of musical relics, rigorously distilled and served cold.',
     ),
     meta: {
       title: 'Music',
-      description: 'Original music, production services, and studio updates from Jeffrey Malek.',
+      description:
+        'Music from The Coldies — driving blues, gritty rock, outlaw country, and killer B-side gems from Denver and Boulder.',
     },
     layout: [
       {
@@ -84,18 +85,18 @@ export const portfolioPagesStatic: Record<
           {
             size: 'twoThirds',
             richText: createRichText([
-              createHeading('Current Direction'),
+              createHeading('The Sound'),
               createParagraph(
-                'Jeffrey’s original music lives somewhere between blues, jazz, folk, and rock, with a loose human feel, a love for groove, and songs that aim to move people emotionally and spiritually. It is music built with personality, curiosity, and room to breathe.',
+                'The Coldies dig through the cooler for the buried gems — driving blues, gritty rock and roll, outlaw country, and those killer B-side pop hits that disappeared before their time. A vibrant mix served like cold shock therapy to get your blood moving.',
               ),
             ]),
           },
           {
             size: 'oneThird',
             richText: createRichText([
-              createHeading('Sound', 'h3'),
+              createHeading('Cold Fusion', 'h3'),
               createParagraph(
-                'Think Beck and David Byrne filtered through funky jazz-blues, folk songwriting, and a modern production ear.',
+                'Think of it as musical archaeology with a rhythm section. Every set is a fresh extraction from the deep sonic strata — no freezer burn, no recycled setlists.',
               ),
             ]),
           },
@@ -103,10 +104,10 @@ export const portfolioPagesStatic: Record<
       },
       {
         blockType: 'youtubeEmbed',
-        heading: 'Featured Session',
+        heading: 'Featured Performance',
         videoId: 'ysz5S6PUM-U',
         caption:
-          'Feature a finished song, stripped-down session, or live-room take that gives listeners a clear first impression of Jeffrey’s original sound.',
+          'Drop a live clip or session recording here so visitors can feel the cold shock therapy for themselves.',
       },
       {
         blockType: 'content',
@@ -114,18 +115,18 @@ export const portfolioPagesStatic: Record<
           {
             size: 'half',
             richText: createRichText([
-              createHeading('Production Services', 'h3'),
+              createHeading('What We Play', 'h3'),
               createParagraph(
-                'Jeffrey offers beat-making, full production, mixing, mastering, songwriting support, and other creative production services for indie artists and collaborative projects.',
+                'Blues, rock and roll, outlaw country, and the B-side gems you forgot you loved. The Coldies cover a wide range of material, always looking for the songs that hit differently — the ones with real grit, soul, and staying power.',
               ),
             ]),
           },
           {
             size: 'half',
             richText: createRichText([
-              createHeading('How Projects Start', 'h3'),
+              createHeading('The Approach', 'h3'),
               createParagraph(
-                'Most work begins with a conversation about scope, sound, and what the music needs. Pricing is based on the project, and Jeffrey is happy to talk through ideas before anything gets too formal.',
+                'No standard setlists. No depleted material. The expedition is ongoing and the cooler is always stocked. Each performance is a fresh round of Cold Fusion Refreshments for the room.',
               ),
             ]),
           },
@@ -133,17 +134,17 @@ export const portfolioPagesStatic: Record<
       },
       {
         blockType: 'youtubeEmbed',
-        heading: 'Studio or Live Preview',
+        heading: 'Another Round',
         videoId: 'ScMzIvxBSi4',
         caption:
-          'Use this slot for an alternate arrangement, a demo in progress, or a live version that shows another side of the songs.',
+          'Use this slot for another live clip, a different venue, or a fan-shot moment from the field.',
       },
       {
         blockType: 'youtubeEmbed',
-        heading: 'What’s Coming Next',
+        heading: 'From the Lab',
         videoId: 'dQw4w9WgXcQ',
         caption:
-          'Jeffrey is currently finishing his first album, so this space can become a teaser, announcement, or early look at the next release.',
+          'Reserve this space for a studio session, rehearsal clip, or any other behind-the-scenes dispatch from the glacio-acoustic lab.',
       },
     ],
   },
@@ -153,12 +154,12 @@ export const portfolioPagesStatic: Record<
     title: 'About',
     hero: createLowImpactHero(
       'About',
-      'A creative, eclectic musician with a deep love for songs, people, and performance.',
+      'The cure for the common cover. Dispatches from the glacio-acoustic lab.',
     ),
     meta: {
       title: 'About',
       description:
-        'Artist story, influences, experience, and teaching philosophy for Jeffrey Malek.',
+        'About The Coldies — a Denver and Boulder area band serving Cold Fusion Refreshments and banishing musical freezer burn one show at a time.',
     },
     layout: [
       {
@@ -167,9 +168,9 @@ export const portfolioPagesStatic: Record<
           {
             size: 'oneThird',
             richText: createRichText([
-              createHeading('Identity', 'h3'),
+              createHeading('The Mission', 'h3'),
               createParagraph(
-                'Creative, funny, easygoing, and serious about making meaningful music with other people.',
+                'Lab observations confirm a critical atmospheric imbalance. The Coldies are the cure.',
               ),
             ]),
           },
@@ -178,10 +179,10 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('The Story'),
               createParagraph(
-                'Jeffrey Malek is a Denver and Boulder area musician who has been performing professionally since 2000. Over the years he has played a wide range of styles including classical, rap, country, rock, folk, jazz, and more, bringing those influences into an approach that feels both grounded and open-minded.',
+                'Lab observations confirm a critical atmospheric imbalance: the prevailing musical climate is undeniably muggy and bland. Standard setlists, resembling the Donner Party of sound, are endlessly cannibalizing the same depleted material. This leaves audiences with rhythmic freezer burn and melodic frostbite.',
               ),
               createParagraph(
-                'He holds a music degree from Fort Lewis College with an emphasis in classical guitar, and while he rarely performs classical repertoire now, that training still shapes his touch, technique, and musicality. Whether on stage, in the studio, or teaching, Jeffrey aims to make music that inspires people and leaves room for joy.',
+                'The Coldies propose an elegant solution: Cold Fusion Refreshments, meticulously distilled from deep sonic strata, banishing musical freezer burn to the far reaches of the realm.',
               ),
             ]),
           },
@@ -193,7 +194,7 @@ export const portfolioPagesStatic: Record<
           {
             size: 'full',
             richText: createRichText([
-              createHeading('“Make music that feels human, honest, and alive.”', 'h2'),
+              createHeading('"The data is clear: The Coldies are the cure for the common cover."', 'h2'),
             ]),
           },
         ],
@@ -204,18 +205,18 @@ export const portfolioPagesStatic: Record<
           {
             size: 'half',
             richText: createRichText([
-              createHeading('Influences', 'h3'),
+              createHeading('The Expedition Team', 'h3'),
               createParagraph(
-                'Jeffrey’s musical world has been shaped by Beck, David Byrne, MF DOOM, The Beatles, John Scofield, Grant Green, and many other artists who balance craft, personality, and originality.',
+                'Leading the expedition is Jeffreeze Malek, primary glacio-acoustic analyst, whose vocal and guitar emissions provide a lil’ nip of something to warm you up. On bass, Joey “The Barometer” Fichera maintains foundational low-frequency stability. Meanwhile, Jake “Cold Snap” Schultz regulates percussive output, ensuring the energetic flow necessary for the experiments.',
               ),
             ]),
           },
           {
             size: 'half',
             richText: createRichText([
-              createHeading('Teaching Style', 'h3'),
+              createHeading('The Research', 'h3'),
               createParagraph(
-                'Jeffrey teaches guitar, bass, voice, production, theory, songwriting, rhythm, and ensemble skills with a holistic approach. Instead of only teaching songs or riffs, he helps students understand how music works so they can grow into creative, confident musicians.',
+                'We’re diggin’ through the cooler for something to quench a profound musical thirst, searching for the truly buried gems like a St Bernard in a Swiss avalanche. Driving blues, gritty rock and roll, outlaw country, and those killer B-side pop hits — served like cold shock therapy to get your blood moving.',
               ),
             ]),
           },
@@ -227,9 +228,9 @@ export const portfolioPagesStatic: Record<
           {
             size: 'twoThirds',
             richText: createRichText([
-              createHeading('Lessons & Creative Work'),
+              createHeading('Based in Denver and Boulder, Colorado'),
               createParagraph(
-                'Jeffrey works with students of all ages and levels, both online and in person, and also offers production support for artists who want thoughtful collaboration. The goal in every setting is the same: make the process feel welcoming, musical, and genuinely human.',
+                'The Coldies perform at bars, private events, festivals, and anywhere audiences want real live music that hits different. If the musical climate in your room is getting muggy, we have the solution.',
               ),
             ]),
           },
@@ -243,12 +244,12 @@ export const portfolioPagesStatic: Record<
     title: 'Events',
     hero: createLowImpactHero(
       'Events',
-      'Live music for bars, private events, community spaces, and more.',
+      'Live dispatches from the field. Check the expedition schedule below.',
     ),
     meta: {
       title: 'Events',
       description:
-        'Live performance details, upcoming shows, and booking information for Jeffrey Malek and The Coldies.',
+        'Upcoming shows and live dates for The Coldies — Denver and Boulder area blues, rock, and outlaw country.',
     },
     layout: [
       {
@@ -257,18 +258,18 @@ export const portfolioPagesStatic: Record<
           {
             size: 'twoThirds',
             richText: createRichText([
-              createHeading('Live Presence'),
+              createHeading('The Expedition Schedule'),
               createParagraph(
-                'Jeffrey performs in a range of settings, from bars and private events to assisted living communities and local venues. His goal is to meet the room, bring people in, and make every performance feel warm, personal, and alive.',
+                'The Coldies deploy across bars, private events, venues, and anywhere audiences are ready for Cold Fusion Refreshments. Full-band sets usually run around 3 hours — enough time to work through a serious amount of material from the cooler.',
               ),
             ]),
           },
           {
             size: 'oneThird',
             richText: createRichText([
-              createHeading('Formats', 'h3'),
+              createHeading('Set Format', 'h3'),
               createParagraph(
-                'Solo sets usually run 1–2 hours with voice, guitar, and loop pedal. Full-band shows with The Coldies usually run around 3 hours and lean into blues and rock.',
+                'Full-band shows run approximately 3 hours. The set covers blues, rock, outlaw country, and those B-side gems — paced to keep the energy moving and the room warm.',
               ),
             ]),
           },
@@ -276,8 +277,8 @@ export const portfolioPagesStatic: Record<
       },
       {
         blockType: 'eventsPreview',
-        heading: 'Upcoming Events',
-        description: 'Upcoming solo shows, band dates, and appearances around Colorado and beyond.',
+        heading: 'Upcoming Expeditions',
+        description: 'Upcoming shows, dates, and Cold Fusion Refreshment deliveries around Colorado and beyond.',
         status: 'upcoming',
         limit: 6,
       },
@@ -289,16 +290,16 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('What to Expect', 'h3'),
               createParagraph(
-                'Jeffrey’s cover repertoire includes songs by The Beatles, A.C. Jobim, Beck, Talking Heads, Robert Earl Keen, and Frank Sinatra, shaped to fit the room and the audience.',
+                'A setlist excavated from the deep sonic strata — no freezer burn, no recycled hits. Blues, rock and roll, outlaw country, and the killer B-sides that got buried. Expect grit, soul, and cold shock therapy for your ears.',
               ),
             ]),
           },
           {
             size: 'half',
             richText: createRichText([
-              createHeading('Booking & Appearances', 'h3'),
+              createHeading('Book the Band', 'h3'),
               createParagraph(
-                'Jeffrey is open to a wide range of venues and events. For bookings, private events, or questions about the right format for your space, use the contact page or reach out through Facebook for now.',
+                'If your venue or event needs a cure for the common cover, reach out through the contact page. The Coldies are open to bars, festivals, private events, and anywhere the musical climate needs refreshing.',
               ),
             ]),
           },
@@ -306,8 +307,8 @@ export const portfolioPagesStatic: Record<
       },
       {
         blockType: 'eventsPreview',
-        heading: 'Past Events',
-        description: 'An archive of performances and appearances across seasons.',
+        heading: 'Past Expeditions',
+        description: 'A cold record of performances and field deployments across seasons.',
         status: 'past',
         limit: 6,
       },
@@ -317,7 +318,7 @@ export const portfolioPagesStatic: Record<
           {
             size: 'full',
             richText: createRichText([
-              createHeading('Every show should feel welcoming, musical, and memorable.', 'h2'),
+              createHeading('"Cold shock therapy for your ears, served live."', 'h2'),
             ]),
           },
         ],
@@ -330,12 +331,12 @@ export const portfolioPagesStatic: Record<
     title: 'News',
     hero: createLowImpactHero(
       'News',
-      'Studio updates, release notes, teaching thoughts, and behind-the-scenes dispatches.',
+      'Field dispatches, show recaps, and updates from the glacio-acoustic lab.',
     ),
     meta: {
       title: 'News',
       description:
-        'Latest posts and updates from Jeffrey Malek across music, performance, and teaching.',
+        'Latest news and updates from The Coldies — show recaps, new finds, and dispatches from the expedition.',
     },
     layout: [
       {
@@ -344,18 +345,18 @@ export const portfolioPagesStatic: Record<
           {
             size: 'twoThirds',
             richText: createRichText([
-              createHeading('Field Notes'),
+              createHeading('Dispatches from the Field'),
               createParagraph(
-                'This is where Jeffrey can share updates from the studio, notes on songs in progress, stories from performances, teaching ideas, and the little moments that shape the larger creative picture.',
+                'This is where The Coldies log the expedition in real time — show recaps, new song discoveries, notes on the cooler contents, and whatever else surfaces during the ongoing research into musical freezer burn prevention.',
               ),
             ]),
           },
           {
             size: 'oneThird',
             richText: createRichText([
-              createHeading('Purpose', 'h3'),
+              createHeading('Lab Notes', 'h3'),
               createParagraph(
-                'Less formal blog, more honest running journal — a simple way to keep listeners, students, and collaborators connected between bigger milestones.',
+                'Less press release, more field journal. A running record of what the band is up to, what’s in the set, and what’s coming next from the glacio-acoustic lab.',
               ),
             ]),
           },
@@ -364,9 +365,9 @@ export const portfolioPagesStatic: Record<
       {
         blockType: 'archive',
         introContent: createRichText([
-          createHeading('Latest Posts'),
+          createHeading('Latest Dispatches'),
           createParagraph(
-            'A chronological feed of releases, works in progress, live updates, teaching reflections, and announcements.',
+            'A chronological record of show updates, new song findings, and expedition notes from The Coldies.',
           ),
         ]),
         populateBy: 'collection',
@@ -379,7 +380,7 @@ export const portfolioPagesStatic: Record<
           {
             size: 'full',
             richText: createRichText([
-              createHeading('Keep the conversation going, even between big moments.', 'h2'),
+              createHeading('"The research is ongoing. The cooler is always stocked."', 'h2'),
             ]),
           },
         ],
@@ -392,12 +393,12 @@ export const portfolioPagesStatic: Record<
     title: 'Contact',
     hero: createLowImpactHero(
       'Contact',
-      'Booking, lessons, collaboration, and direct contact information.',
+      'Booking inquiries, collaboration, and direct contact. The lab is open.',
     ),
     meta: {
       title: 'Contact',
       description:
-        'Contact Jeffrey Malek for booking, lessons, production work, and collaborations.',
+        'Contact The Coldies for booking, private events, collaborations, and general inquiries.',
     },
     layout: [
       {
@@ -408,7 +409,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Open Lines'),
               createParagraph(
-                'Use this page for booking inquiries, lesson requests, production conversations, and general questions. The goal is simple: make it easy to start a conversation and figure out what might be a good fit.',
+                'If your venue, event, or musical climate needs the Cold Fusion treatment, reach out. The Coldies are available for bars, private events, festivals, and anywhere audiences are ready for something that hits different.',
               ),
             ]),
           },
@@ -417,7 +418,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Best Way to Reach Out', 'h3'),
               createParagraph(
-                'For now, the best options are the contact form and Facebook. A direct email address at info@jeffreymalek.com is planned as the site setup is finalized.',
+                'Use the contact form or reach out through Facebook. A direct email address is coming as the site is finalized.',
               ),
             ]),
           },
@@ -431,16 +432,16 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('For Booking', 'h3'),
               createParagraph(
-                'Reach out about solo performances, bookings with The Coldies, private events, assisted living performances, or other live opportunities.',
+                'Reach out about full-band performances, private events, festival slots, bar residencies, and any other live opportunity where Cold Fusion Refreshments are needed.',
               ),
             ]),
           },
           {
             size: 'half',
             richText: createRichText([
-              createHeading('For Lessons & Production', 'h3'),
+              createHeading('For General Inquiries', 'h3'),
               createParagraph(
-                'Jeffrey also welcomes inquiries about music lessons, songwriting help, production, mixing, mastering, and creative collaboration. Pricing depends on the project or lesson plan.',
+                'Media, collaborations, questions about the expedition methodology, or anything else — send it through the form and someone from the lab will be in touch.',
               ),
             ]),
           },
@@ -451,7 +452,7 @@ export const portfolioPagesStatic: Record<
         columns: [
           {
             size: 'full',
-            richText: createRichText([createHeading('Facebook · Contact Form · Email Soon', 'h2')]),
+            richText: createRichText([createHeading('Facebook · Contact Form · Email Coming Soon', 'h2')]),
           },
         ],
       },
@@ -461,9 +462,9 @@ export const portfolioPagesStatic: Record<
           {
             size: 'twoThirds',
             richText: createRichText([
-              createHeading('Where to Connect'),
+              createHeading('Where to Find Us'),
               createParagraph(
-                'As the site grows, this can become a richer hub with additional social links, a press kit, and direct email support. For now, keeping it simple and welcoming is the right move.',
+                'Follow The Coldies on Facebook for show announcements, field dispatches, and the latest from the glacio-acoustic lab. More social links and direct contact options coming as the site expands.',
               ),
             ]),
           },
