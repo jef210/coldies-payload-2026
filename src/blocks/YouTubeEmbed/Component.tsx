@@ -5,30 +5,44 @@ import type { YouTubeEmbedBlock as YouTubeEmbedBlockProps } from '@/payload-type
 const normalizeYouTubeId = (value: string): string => {
   const trimmedValue = value.trim()
 
-  if (!trimmedValue.includes('http')) {
-    return trimmedValue
+  if (!trimmedValue) {
+    return ''
+  }
+
+  const iframedSrcMatch = trimmedValue.match(/src=["']([^"']+)["']/i)
+  const candidate = iframedSrcMatch?.[1] ?? trimmedValue
+
+  const idPattern =
+    /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/
+  const directIdPattern = /^[A-Za-z0-9_-]{11}$/
+
+  const fromPattern = candidate.match(idPattern)?.[1]
+  if (fromPattern) {
+    return fromPattern
+  }
+
+  if (directIdPattern.test(candidate)) {
+    return candidate
   }
 
   try {
-    const parsedURL = new URL(trimmedValue)
-
-    if (parsedURL.hostname.includes('youtu.be')) {
-      return parsedURL.pathname.replace('/', '')
-    }
+    const parsedURL = new URL(candidate)
 
     const searchID = parsedURL.searchParams.get('v')
-    if (searchID) return searchID
+    if (searchID && directIdPattern.test(searchID)) {
+      return searchID
+    }
 
     const pathParts = parsedURL.pathname.split('/').filter(Boolean)
-    const embedIndex = pathParts.indexOf('embed')
-    if (embedIndex >= 0 && pathParts[embedIndex + 1]) {
-      return pathParts[embedIndex + 1]
+    const possibleID = pathParts[pathParts.length - 1]
+    if (possibleID && directIdPattern.test(possibleID)) {
+      return possibleID
     }
   } catch {
-    return trimmedValue
+    return candidate.split('?')[0].split('&')[0].trim()
   }
 
-  return trimmedValue
+  return candidate.split('?')[0].split('&')[0].trim()
 }
 
 export const YouTubeEmbedBlock: React.FC<YouTubeEmbedBlockProps> = ({
