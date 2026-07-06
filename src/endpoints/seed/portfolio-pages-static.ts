@@ -194,7 +194,10 @@ export const portfolioPagesStatic: Record<
           {
             size: 'full',
             richText: createRichText([
-              createHeading('"The data is clear: The Coldies are the cure for the common cover."', 'h2'),
+              createHeading(
+                '"The data is clear: The Coldies are the cure for the common cover."',
+                'h2',
+              ),
             ]),
           },
         ],
@@ -278,7 +281,8 @@ export const portfolioPagesStatic: Record<
       {
         blockType: 'eventsPreview',
         heading: 'Upcoming Expeditions',
-        description: 'Upcoming shows, dates, and Cold Fusion Refreshment deliveries around Colorado and beyond.',
+        description:
+          'Upcoming shows, dates, and Cold Fusion Refreshment deliveries around Colorado and beyond.',
         status: 'upcoming',
         limit: 6,
       },
@@ -326,12 +330,12 @@ export const portfolioPagesStatic: Record<
     ],
   },
   news: {
-    slug: 'news',
+    slug: 'epk',
     _status: 'published',
-    title: 'News',
+    title: 'EPK',
     hero: createLowImpactHero(
-      'News',
-      'Field dispatches, show recaps, and updates from the glacio-acoustic lab.',
+      'Electronic Press Kit',
+      'Everything you need to know about The Coldies — bio, members, booking, and press materials.',
     ),
     meta: {
       title: 'News',
@@ -452,7 +456,9 @@ export const portfolioPagesStatic: Record<
         columns: [
           {
             size: 'full',
-            richText: createRichText([createHeading('Facebook · Contact Form · Email Coming Soon', 'h2')]),
+            richText: createRichText([
+              createHeading('Facebook · Contact Form · Email Coming Soon', 'h2'),
+            ]),
           },
         ],
       },

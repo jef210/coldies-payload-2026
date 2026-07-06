@@ -36,8 +36,8 @@ export const defaultHeaderNavItems: NonNullable<Header['navItems']> = [
   {
     link: {
       type: 'custom',
-      label: 'News',
-      url: '/news',
+      label: 'EPK',
+      url: '/epk',
       newTab: false,
     },
   },
