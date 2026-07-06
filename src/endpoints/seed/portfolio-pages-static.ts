@@ -106,8 +106,7 @@ export const portfolioPagesStatic: Record<
         blockType: 'youtubeEmbed',
         heading: 'Featured Performance',
         videoId: 'ysz5S6PUM-U',
-        caption:
-          'Drop a live clip or session recording here so visitors can feel the cold shock therapy for themselves.',
+        caption: 'A featured live performance from The Coldies expedition archive.',
       },
       {
         blockType: 'content',
@@ -136,15 +135,13 @@ export const portfolioPagesStatic: Record<
         blockType: 'youtubeEmbed',
         heading: 'Another Round',
         videoId: 'ScMzIvxBSi4',
-        caption:
-          'Use this slot for another live clip, a different venue, or a fan-shot moment from the field.',
+        caption: 'Another live cut from the trail — different room, same Cold Fusion energy.',
       },
       {
         blockType: 'youtubeEmbed',
         heading: 'From the Lab',
         videoId: 'dQw4w9WgXcQ',
-        caption:
-          'Reserve this space for a studio session, rehearsal clip, or any other behind-the-scenes dispatch from the glacio-acoustic lab.',
+        caption: 'Studio or rehearsal dispatches from the glacio-acoustic lab.',
       },
     ],
   },
@@ -338,9 +335,9 @@ export const portfolioPagesStatic: Record<
       'Everything you need to know about The Coldies — bio, members, booking, and press materials.',
     ),
     meta: {
-      title: 'News',
+      title: 'Electronic Press Kit',
       description:
-        'Latest news and updates from The Coldies — show recaps, new finds, and dispatches from the expedition.',
+        'The Coldies electronic press kit: band bio, show format, booking context, and press-ready overview.',
     },
     layout: [
       {
@@ -351,7 +348,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Dispatches from the Field'),
               createParagraph(
-                'This is where The Coldies log the expedition in real time — show recaps, new song discoveries, notes on the cooler contents, and whatever else surfaces during the ongoing research into musical freezer burn prevention.',
+                'This press-kit section summarizes The Coldies story, set approach, and live-show identity for venues, promoters, and media.',
               ),
             ]),
           },
@@ -360,7 +357,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Lab Notes', 'h3'),
               createParagraph(
-                'Less press release, more field journal. A running record of what the band is up to, what’s in the set, and what’s coming next from the glacio-acoustic lab.',
+                'A concise overview of what the band plays, how shows are structured, and how to book The Coldies.',
               ),
             ]),
           },
@@ -369,10 +366,8 @@ export const portfolioPagesStatic: Record<
       {
         blockType: 'archive',
         introContent: createRichText([
-          createHeading('Latest Dispatches'),
-          createParagraph(
-            'A chronological record of show updates, new song findings, and expedition notes from The Coldies.',
-          ),
+          createHeading('Press Highlights'),
+          createParagraph('A running record of updates, notable shows, and key band milestones.'),
         ]),
         populateBy: 'collection',
         relationTo: 'posts',
@@ -422,7 +417,7 @@ export const portfolioPagesStatic: Record<
             richText: createRichText([
               createHeading('Best Way to Reach Out', 'h3'),
               createParagraph(
-                'Use the contact form or reach out through Facebook. A direct email address is coming as the site is finalized.',
+                'Use the contact form for booking and inquiries. Include date, location, and event details for the fastest response.',
               ),
             ]),
           },
@@ -456,9 +451,7 @@ export const portfolioPagesStatic: Record<
         columns: [
           {
             size: 'full',
-            richText: createRichText([
-              createHeading('Facebook · Contact Form · Email Coming Soon', 'h2'),
-            ]),
+            richText: createRichText([createHeading('Contact Form · Facebook', 'h2')]),
           },
         ],
       },

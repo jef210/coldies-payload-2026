@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import Image from 'next/image'
 import React from 'react'
 
 interface Props {
@@ -8,16 +9,20 @@ interface Props {
 }
 
 export const Logo = (props: Props) => {
-  const { className } = props
+  const { className, loading = 'lazy', priority = 'auto' } = props
 
   return (
-    <div className={clsx('flex flex-col leading-none text-foreground', className)}>
-      <span className="text-[0.65rem] font-medium uppercase tracking-[0.42em] text-muted-foreground">
-        The
-      </span>
-      <span className="mt-1 text-[1.15rem] font-semibold uppercase tracking-[0.28em] text-foreground md:text-[1.35rem]">
-        Coldies
-      </span>
+    <div className={clsx('flex items-center', className)}>
+      <Image
+        alt="The Coldies"
+        className="h-10 w-auto md:h-11"
+        fetchPriority={priority}
+        height={200}
+        loading={loading}
+        priority={priority === 'high'}
+        src="/coldies-logo-0626.1.png"
+        width={860}
+      />
     </div>
   )
 }

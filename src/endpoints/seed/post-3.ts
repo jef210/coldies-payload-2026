@@ -7,7 +7,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
   author,
 }) => {
   return {
-    slug: 'dollar-and-sense-the-financial-forecast',
+    slug: 'setlist-lab-vol-3',
     _status: 'published',
     authors: [author],
     content: {
@@ -41,7 +41,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                           format: 0,
                           mode: 'normal',
                           style: '',
-                          text: 'This content is fabricated and for demonstration purposes only. To edit this post, ',
+                          text: 'These are working notes from The Coldies setlist lab and current show prep. ',
                           version: 1,
                         },
                         {
@@ -53,7 +53,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                               format: 0,
                               mode: 'normal',
                               style: '',
-                              text: 'navigate to the admin dashboard.',
+                              text: 'Open the band admin dashboard.',
                               version: 1,
                             },
                           ],
@@ -95,7 +95,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: "Money isn't just currency; ",
+                text: 'A strong set is not just song selection; ',
                 version: 1,
               },
               {
@@ -104,7 +104,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                 format: 2,
                 mode: 'normal',
                 style: '',
-                text: "it's a language. ",
+                text: 'it is sequencing. ',
                 version: 1,
               },
               {
@@ -113,7 +113,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: 'Dive deep into its nuances, where strategy meets intuition in the vast sea of finance.',
+                text: 'This dispatch tracks how we build momentum across a full night of music.',
                 version: 1,
               },
             ],
@@ -132,7 +132,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: "Money, in its essence, transcends the mere concept of coins and paper notes; it becomes a profound language that speaks of value, trust, and societal structures. Like any language, it possesses intricate nuances and subtleties that require a discerning understanding. It's in these depths where the calculated world of financial strategy collides with the raw, instinctive nature of human intuition. Just as a seasoned linguist might dissect the syntax and semantics of a sentence, a financial expert navigates the vast and tumultuous ocean of finance, guided not only by logic and data but also by gut feelings and foresight. Every transaction, investment, and financial decision becomes a dialogue in this expansive lexicon of commerce and value.",
+                text: 'We are currently tuning how each segment lands: opening with immediate groove, leaning into guitar-forward blues mid-set, then lifting into singalong moments before the closer. The objective is clear pacing with no drop in room energy.',
                 version: 1,
               },
             ],
@@ -161,7 +161,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: 'Stock Market Dynamics: Bulls, Bears, and the Uncertain Middle',
+                text: 'What Is Changing in Rotation',
                 version: 1,
               },
             ],
@@ -180,7 +180,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: 'The stock market is a realm of vast opportunity but also poses risks. Discover the forces that drive market trends and the strategies employed by top traders to navigate this complex ecosystem. From market analysis to understanding investor psychology, get a comprehensive insight into the world of stocks.',
+                text: 'We are adding more outlaw-country cuts in the first half and holding two high-recognition rock tracks for late in the night where they hit hardest. Early tests show better crowd retention and stronger finish energy.',
                 version: 1,
               },
             ],
@@ -199,7 +199,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: "The stock market, often visualized as a bustling arena of numbers and ticker tapes, is as much about human behavior as it is about economics. It's a place where optimism, represented by the bullish rally, meets the caution of bearish downturns, with each vying to dictate the market's direction. But between these two extremes lies an uncertain middle ground, a zone populated by traders and investors who constantly weigh hope against fear. Successful navigation requires more than just financial acumen; it demands an understanding of collective sentiments and the ability to predict not just market movements, but also the reactions of other market participants. In this intricate dance of numbers and nerves, the most astute players are those who master both the hard data and the soft nuances of human behavior.",
+                text: 'As always, we keep space for in-room reads and requests. The strongest nights happen when preparation meets flexibility, and the room helps shape the final arc of the set.',
                 version: 1,
               },
             ],
@@ -227,7 +227,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
                           format: 0,
                           mode: 'normal',
                           style: '',
-                          text: "This content above is completely dynamic using custom layout building blocks configured in the CMS. This can be anything you'd like from rich text and images, to highly designed, complex components.",
+                          text: 'Next update will cover rehearsal changes and what songs are entering the next live cycle.',
                           version: 1,
                         },
                       ],
@@ -258,11 +258,12 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
     },
     heroImage: heroImage.id,
     meta: {
-      description: `Money isn't just currency; it's a language. Dive deep into its nuances, where strategy meets intuition in the vast sea of finance.`,
+      description:
+        'Setlist Lab notes from The Coldies: sequencing strategy, rotation updates, and live performance tuning.',
       image: heroImage.id,
-      title: 'Dollar and Sense: The Financial Forecast',
+      title: 'Setlist Lab Vol. 3',
     },
     relatedPosts: [], // this is populated by the seed script
-    title: 'Dollar and Sense: The Financial Forecast',
+    title: 'Setlist Lab Vol. 3',
   }
 }
