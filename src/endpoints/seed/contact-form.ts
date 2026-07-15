@@ -35,7 +35,62 @@ export const contactForm: RequiredDataFromCollectionSlug<'forms'> = {
   createdAt: '2023-01-12T21:47:41.374Z',
   emails: [
     {
-      emailFrom: '"Payload" \u003Cdemo@payloadcms.com\u003E',
+      emailFrom: '"The Coldies" \u003Cinfo@thecoldies.com\u003E',
+      emailTo: 'info@thecoldies.com',
+      replyTo: '{{email}}',
+      message: {
+        root: {
+          type: 'root',
+          children: [
+            {
+              type: 'paragraph',
+              children: [
+                {
+                  type: 'text',
+                  detail: 0,
+                  format: 0,
+                  mode: 'normal',
+                  style: '',
+                  text: 'New booking/contact submission received from thecoldies.com.',
+                  version: 1,
+                },
+              ],
+              direction: 'ltr',
+              format: '',
+              indent: 0,
+              textFormat: 0,
+              version: 1,
+            },
+            {
+              type: 'paragraph',
+              children: [
+                {
+                  type: 'text',
+                  detail: 0,
+                  format: 0,
+                  mode: 'normal',
+                  style: '',
+                  text: '{{*:table}}',
+                  version: 1,
+                },
+              ],
+              direction: 'ltr',
+              format: '',
+              indent: 0,
+              textFormat: 0,
+              version: 1,
+            },
+          ],
+          direction: 'ltr',
+          format: '',
+          indent: 0,
+          version: 1,
+        },
+      },
+      subject: 'New website inquiry for The Coldies',
+    },
+    {
+      emailFrom: '"The Coldies" \u003Cinfo@thecoldies.com\u003E',
       emailTo: '{{email}}',
       message: {
         root: {
@@ -50,7 +105,7 @@ export const contactForm: RequiredDataFromCollectionSlug<'forms'> = {
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: 'We got your message and will follow up soon with next steps.',
+                  text: 'Thanks for reaching out to The Coldies. We received your message and will follow up soon.',
                   version: 1,
                 },
               ],

@@ -1,4 +1,5 @@
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import sharp from 'sharp'
 import path from 'path'
 import { buildConfig, PayloadRequest } from 'payload'
@@ -60,6 +61,20 @@ export default buildConfig({
   editor: defaultLexical,
   db: mongooseAdapter({
     url: process.env.DATABASE_URL || '',
+  }),
+  email: nodemailerAdapter({
+    defaultFromAddress: process.env.SMTP_FROM_ADDRESS || 'info@thecoldies.com',
+    defaultFromName: process.env.SMTP_FROM_NAME || 'The Coldies',
+    skipVerify: process.env.SMTP_SKIP_VERIFY === 'true',
+    transportOptions: {
+      auth: {
+        pass: process.env.SMTP_PASS,
+        user: process.env.SMTP_USER,
+      },
+      host: process.env.SMTP_HOST || 'smtp.zoho.com',
+      port: Number(process.env.SMTP_PORT || 587),
+      secure: process.env.SMTP_SECURE === 'true',
+    },
   }),
   collections: [Pages, Posts, Events, Media, Categories, Users],
   cors: [getServerSideURL()].filter(Boolean),

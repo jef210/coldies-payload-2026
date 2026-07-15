@@ -204,13 +204,7 @@ export interface Page {
     media?: (string | null) | Media;
   };
   layout: (
-    | CallToActionBlock
-    | ContentBlock
-    | MediaBlock
-    | YouTubeEmbedBlock
-    | EventsPreviewBlock
-    | ArchiveBlock
-    | FormBlock
+    CallToActionBlock | ContentBlock | MediaBlock | YouTubeEmbedBlock | EventsPreviewBlock | ArchiveBlock | FormBlock
   )[];
   meta?: {
     title?: string | null;
@@ -286,6 +280,10 @@ export interface Post {
  */
 export interface Media {
   id: string;
+  /**
+   * Managed automatically by the poster picker above.
+   */
+  posterFilename?: string | null;
   alt?: string | null;
   caption?: {
     root: {
@@ -564,7 +562,7 @@ export interface MediaBlock {
 export interface YouTubeEmbedBlock {
   heading?: string | null;
   /**
-   * YouTube video ID (example: dQw4w9WgXcQ)
+   * YouTube ID / URL OR direct video URL (example: dQw4w9WgXcQ or /videos/home-video-1.mp4)
    */
   videoId: string;
   caption?: string | null;
@@ -1322,6 +1320,7 @@ export interface EventsSelect<T extends boolean = true> {
  * via the `definition` "media_select".
  */
 export interface MediaSelect<T extends boolean = true> {
+  posterFilename?: T;
   alt?: T;
   caption?: T;
   folder?: T;

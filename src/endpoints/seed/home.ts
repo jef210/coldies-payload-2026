@@ -89,7 +89,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: " to begin managing The Coldies site content. The code for this site is completely open-source and can be found ",
+                  text: ' to begin managing The Coldies site content. The code for this site is completely open-source and can be found ',
                   version: 1,
                 },
                 {
@@ -140,6 +140,81 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
       },
     },
     layout: [
+      {
+        blockType: 'content',
+        columns: [
+          {
+            size: 'full',
+            richText: {
+              root: {
+                type: 'root',
+                children: [
+                  {
+                    type: 'heading',
+                    children: [
+                      {
+                        type: 'text',
+                        detail: 0,
+                        format: 0,
+                        mode: 'normal',
+                        style: '',
+                        text: 'Featured Videos',
+                        version: 1,
+                      },
+                    ],
+                    direction: 'ltr',
+                    format: '',
+                    indent: 0,
+                    tag: 'h2',
+                    version: 1,
+                  },
+                  {
+                    type: 'paragraph',
+                    children: [
+                      {
+                        type: 'text',
+                        detail: 0,
+                        format: 0,
+                        mode: 'normal',
+                        style: '',
+                        text: 'Recent Coldies video highlights, pinned to the top of the homepage.',
+                        version: 1,
+                      },
+                    ],
+                    direction: 'ltr',
+                    format: '',
+                    indent: 0,
+                    textFormat: 0,
+                    version: 1,
+                  },
+                ],
+                direction: 'ltr',
+                format: '',
+                indent: 0,
+                version: 1,
+              },
+            },
+          },
+        ],
+      },
+      {
+        blockType: 'youtubeEmbed',
+        heading: 'Video 1',
+        videoId: '/videos/home-video-1.mp4',
+        caption: 'Top video slot 1',
+      },
+      {
+        blockType: 'youtubeEmbed',
+        heading: 'Video 2',
+        videoId: '/videos/home-video-2.mp4',
+        caption: 'Top video slot 2',
+      },
+      {
+        blockType: 'youtubeEmbed',
+        heading: 'Video 3',
+        videoId: '/videos/home-video-3.mp4',
+        caption: 'Top video slot 3',
+      },
       {
         blockName: 'Content Block',
         blockType: 'content',

@@ -13,7 +13,8 @@ export const YouTubeEmbed: Block = {
       type: 'text',
       required: true,
       admin: {
-        description: 'YouTube video ID (example: dQw4w9WgXcQ)',
+        description:
+          'YouTube ID / URL OR direct video URL (example: dQw4w9WgXcQ or /videos/home-video-1.mp4)',
       },
     },
     {

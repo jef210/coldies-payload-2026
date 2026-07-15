@@ -90,6 +90,82 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
       blockType: 'content',
       columns: [
         {
+          size: 'full',
+          richText: {
+            root: {
+              type: 'root',
+              children: [
+                {
+                  type: 'heading',
+                  children: [
+                    {
+                      type: 'text',
+                      detail: 0,
+                      format: 0,
+                      mode: 'normal',
+                      style: '',
+                      text: 'Featured Videos',
+                      version: 1,
+                    },
+                  ],
+                  direction: 'ltr',
+                  format: '',
+                  indent: 0,
+                  tag: 'h2',
+                  version: 1,
+                },
+                {
+                  type: 'paragraph',
+                  children: [
+                    {
+                      type: 'text',
+                      detail: 0,
+                      format: 0,
+                      mode: 'normal',
+                      style: '',
+                      text: 'Start here for recent Coldies video highlights. We can tune this layout and ordering anytime.',
+                      version: 1,
+                    },
+                  ],
+                  direction: 'ltr',
+                  format: '',
+                  indent: 0,
+                  textFormat: 0,
+                  version: 1,
+                },
+              ],
+              direction: 'ltr',
+              format: '',
+              indent: 0,
+              version: 1,
+            },
+          },
+        },
+      ],
+    },
+    {
+      blockType: 'youtubeEmbed',
+      heading: 'You Can Have The Crown',
+      videoId:
+        '/api/media/file/The%20Coldies%20-%20You%20Can%20Have%20The%20Crown%20-%20021026%20-%20Landscape.mp4',
+      caption: 'Featured video',
+    },
+    {
+      blockType: 'youtubeEmbed',
+      heading: 'Video 2',
+      videoId: '/videos/home-video-2.mp4',
+      caption: 'Top video slot 2',
+    },
+    {
+      blockType: 'youtubeEmbed',
+      heading: 'Video 3',
+      videoId: '/videos/home-video-3.mp4',
+      caption: 'Top video slot 3',
+    },
+    {
+      blockType: 'content',
+      columns: [
+        {
           size: 'twoThirds',
           richText: {
             root: {

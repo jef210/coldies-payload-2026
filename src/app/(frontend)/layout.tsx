@@ -5,21 +5,17 @@ import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import React from 'react'
 
-import { AdminBar } from '@/components/AdminBar'
 import { Footer } from '@/Footer/Component'
 import { Header } from '@/Header/Component'
 import { MotionController } from '@/components/Motion/MotionController.client'
 import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
-import { draftMode } from 'next/headers'
 
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const { isEnabled } = await draftMode()
-
   return (
     <html className={cn(GeistSans.variable, GeistMono.variable)} lang="en" suppressHydrationWarning>
       <head>
@@ -30,11 +26,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <Providers>
           <MotionController />
-          <AdminBar
-            adminBarProps={{
-              preview: isEnabled,
-            }}
-          />
 
           <Header />
           <div aria-hidden className="h-[var(--site-header-offset)] shrink-0" />
