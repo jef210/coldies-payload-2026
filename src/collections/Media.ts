@@ -1,4 +1,4 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionAfterChangeHook, CollectionAfterDeleteHook, CollectionConfig } from 'payload'
 
 import {
   FixedToolbarFeature,
@@ -7,6 +7,7 @@ import {
 } from '@payloadcms/richtext-lexical'
 import fs from 'fs'
 import path from 'path'
+import { revalidatePath } from 'next/cache'
 import { fileURLToPath } from 'url'
 
 import { anyone } from '../access/anyone'
@@ -17,6 +18,22 @@ const dirname = path.dirname(filename)
 const staticDir = path.resolve(dirname, '../../public/media')
 const postersDir = path.resolve(staticDir, 'posters')
 
+// Media has no back-reference to the pages that use it, so on any change we
+// revalidate the whole site rather than trying to track which pages embed it.
+const revalidateMedia: CollectionAfterChangeHook = ({ req: { payload, context } }) => {
+  if (!context.disableRevalidate) {
+    payload.logger.info('Revalidating pages after media change')
+    revalidatePath('/', 'layout')
+  }
+}
+
+const revalidateMediaDelete: CollectionAfterDeleteHook = ({ req: { payload, context } }) => {
+  if (!context.disableRevalidate) {
+    payload.logger.info('Revalidating pages after media delete')
+    revalidatePath('/', 'layout')
+  }
+}
+
 export const Media: CollectionConfig = {
   slug: 'media',
   folders: true,
@@ -25,6 +42,10 @@ export const Media: CollectionConfig = {
     delete: authenticated,
     read: anyone,
     update: authenticated,
+  },
+  hooks: {
+    afterChange: [revalidateMedia],
+    afterDelete: [revalidateMediaDelete],
   },
   endpoints: [
     {

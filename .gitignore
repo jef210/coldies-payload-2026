@@ -24,3 +24,6 @@ node_modules/
 *.bak
 
 *.tsbuildinfo
+
+# Personal reference doc — not for the public repo
+docs/site-editing-guide.html
