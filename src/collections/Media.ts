@@ -85,7 +85,11 @@ export const Media: CollectionConfig = {
         const buffer = Buffer.from(await file.arrayBuffer())
         fs.writeFileSync(path.join(postersDir, posterFilename), buffer)
 
-        const posterPath = `/media/posters/${posterFilename}`
+        // Served through our own route (below), not Next's static /public
+        // folder — Next's production server only recognizes files that
+        // existed in /public when it booted, so a poster written while the
+        // app is already running would 404 until the next restart.
+        const posterPath = `/api/media/${id}/poster`
 
         await req.payload.update({
           collection: 'media',
@@ -95,6 +99,27 @@ export const Media: CollectionConfig = {
         })
 
         return Response.json({ posterFilename: posterPath })
+      },
+    },
+    {
+      path: '/:id/poster',
+      method: 'get',
+      handler: async (req) => {
+        const id = req.routeParams?.id as string
+        const posterPath = path.join(postersDir, `${id}-poster.jpg`)
+
+        if (!fs.existsSync(posterPath)) {
+          return Response.json({ error: 'Poster not found' }, { status: 404 })
+        }
+
+        const buffer = fs.readFileSync(posterPath)
+
+        return new Response(buffer, {
+          headers: {
+            'Content-Type': 'image/jpeg',
+            'Cache-Control': 'public, max-age=3600',
+          },
+        })
       },
     },
   ],
