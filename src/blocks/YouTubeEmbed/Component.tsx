@@ -4,6 +4,7 @@ import { getPayload } from 'payload'
 
 import type { YouTubeEmbedBlock as YouTubeEmbedBlockProps } from '@/payload-types'
 
+import { cn } from '@/utilities/ui'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 
 const normalizeYouTubeId = (value: string): string => {
@@ -81,7 +82,12 @@ const extractFilenameFromPath = (value: string): string => {
   }
 }
 
-export const YouTubeEmbedBlock = async ({ heading, videoId, caption }: YouTubeEmbedBlockProps) => {
+export const YouTubeEmbedBlock = async ({
+  enableGutter = true,
+  heading,
+  videoId,
+  caption,
+}: YouTubeEmbedBlockProps & { enableGutter?: boolean }) => {
   const isDirectVideo = isDirectVideoSource(videoId)
   const parsedVideoID = normalizeYouTubeId(videoId)
   const embedURL = `https://www.youtube-nocookie.com/embed/${parsedVideoID}?rel=0&modestbranding=1`
@@ -132,7 +138,7 @@ export const YouTubeEmbedBlock = async ({ heading, videoId, caption }: YouTubeEm
   }
 
   return (
-    <section className="container my-20 md:my-28" data-reveal="fade">
+    <section className={cn(enableGutter && 'container my-20 md:my-28')} data-reveal="fade">
       <div className="mb-6 max-w-3xl">
         <p className="mb-3 text-xs uppercase tracking-[0.32em] text-muted-foreground">Listen</p>
         {heading ? <h2 className="text-3xl md:text-5xl">{heading}</h2> : null}

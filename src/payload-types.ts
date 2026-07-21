@@ -210,7 +210,14 @@ export interface Page {
     media?: (string | null) | Media;
   };
   layout: (
-    CallToActionBlock | ContentBlock | MediaBlock | YouTubeEmbedBlock | EventsPreviewBlock | ArchiveBlock | FormBlock
+    | CallToActionBlock
+    | ContentBlock
+    | ColumnsBlock
+    | MediaBlock
+    | YouTubeEmbedBlock
+    | EventsPreviewBlock
+    | ArchiveBlock
+    | FormBlock
   )[];
   meta?: {
     title?: string | null;
@@ -550,6 +557,66 @@ export interface ContentBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'content';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ColumnsBlock".
+ */
+export interface ColumnsBlock {
+  columns?:
+    | {
+        size?: ('oneThird' | 'half' | 'twoThirds' | 'full') | null;
+        blocks?: (TextBlock | MediaBlock | YouTubeEmbedBlock | CallToActionBlock)[] | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'columns';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TextBlock".
+ */
+export interface TextBlock {
+  richText?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  enableLink?: boolean | null;
+  link?: {
+    type?: ('reference' | 'custom') | null;
+    newTab?: boolean | null;
+    reference?:
+      | ({
+          relationTo: 'pages';
+          value: string | Page;
+        } | null)
+      | ({
+          relationTo: 'posts';
+          value: string | Post;
+        } | null);
+    url?: string | null;
+    label: string;
+    /**
+     * Choose how the link should be rendered.
+     */
+    appearance?: ('default' | 'outline') | null;
+  };
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'textBlock';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1157,6 +1224,7 @@ export interface PagesSelect<T extends boolean = true> {
     | {
         cta?: T | CallToActionBlockSelect<T>;
         content?: T | ContentBlockSelect<T>;
+        columns?: T | ColumnsBlockSelect<T>;
         mediaBlock?: T | MediaBlockSelect<T>;
         youtubeEmbed?: T | YouTubeEmbedBlockSelect<T>;
         eventsPreview?: T | EventsPreviewBlockSelect<T>;
@@ -1223,6 +1291,48 @@ export interface ContentBlockSelect<T extends boolean = true> {
               appearance?: T;
             };
         id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ColumnsBlock_select".
+ */
+export interface ColumnsBlockSelect<T extends boolean = true> {
+  columns?:
+    | T
+    | {
+        size?: T;
+        blocks?:
+          | T
+          | {
+              textBlock?: T | TextBlockSelect<T>;
+              mediaBlock?: T | MediaBlockSelect<T>;
+              youtubeEmbed?: T | YouTubeEmbedBlockSelect<T>;
+              cta?: T | CallToActionBlockSelect<T>;
+            };
+        id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TextBlock_select".
+ */
+export interface TextBlockSelect<T extends boolean = true> {
+  richText?: T;
+  enableLink?: T;
+  link?:
+    | T
+    | {
+        type?: T;
+        newTab?: T;
+        reference?: T;
+        url?: T;
+        label?: T;
+        appearance?: T;
       };
   id?: T;
   blockName?: T;

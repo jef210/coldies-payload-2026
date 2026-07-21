@@ -4,6 +4,7 @@ import { authenticated } from '../../access/authenticated'
 import { authenticatedOrPublished } from '../../access/authenticatedOrPublished'
 import { Archive } from '../../blocks/ArchiveBlock/config'
 import { CallToAction } from '../../blocks/CallToAction/config'
+import { Columns } from '../../blocks/Columns/config'
 import { Content } from '../../blocks/Content/config'
 import { EventsPreview } from '../../blocks/EventsPreview/config'
 import { FormBlock } from '../../blocks/Form/config'
@@ -77,6 +78,7 @@ export const Pages: CollectionConfig<'pages'> = {
               blocks: [
                 CallToAction,
                 Content,
+                Columns,
                 MediaBlock,
                 YouTubeEmbed,
                 EventsPreview,
