@@ -834,6 +834,15 @@ export interface Event {
   status: 'upcoming' | 'past';
   venue?: string | null;
   city?: string | null;
+  /**
+   * Shown as a thumbnail on the event card, linking to the Venue Website URL below.
+   */
+  venueLogo?: (string | null) | Media;
+  venueWebsiteURL?: string | null;
+  /**
+   * Paste the venue’s Google Maps link (Share → Copy link).
+   */
+  venueMapURL?: string | null;
   ticketURL?: string | null;
   notes?: string | null;
   updatedAt: string;
@@ -1316,6 +1325,9 @@ export interface EventsSelect<T extends boolean = true> {
   status?: T;
   venue?: T;
   city?: T;
+  venueLogo?: T;
+  venueWebsiteURL?: T;
+  venueMapURL?: T;
   ticketURL?: T;
   notes?: T;
   updatedAt?: T;
