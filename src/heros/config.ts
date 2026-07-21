@@ -16,23 +16,27 @@ export const hero: Field = {
     {
       name: 'type',
       type: 'select',
-      defaultValue: 'lowImpact',
+      defaultValue: 'highImpact',
       label: 'Type',
+      admin: {
+        description:
+          'Full Background works for either a photo or a video — pick it for the main landing hero.',
+      },
       options: [
         {
-          label: 'None',
+          label: 'No Hero',
           value: 'none',
         },
         {
-          label: 'High Impact',
+          label: 'Full Background (Photo or Video)',
           value: 'highImpact',
         },
         {
-          label: 'Medium Impact',
+          label: 'Featured Media Card',
           value: 'mediumImpact',
         },
         {
-          label: 'Low Impact',
+          label: 'Text Only',
           value: 'lowImpact',
         },
       ],
@@ -63,6 +67,7 @@ export const hero: Field = {
       type: 'upload',
       admin: {
         condition: (_, { type } = {}) => ['highImpact', 'mediumImpact'].includes(type),
+        description: 'A photo or a video both work here — pick whichever from your Media library.',
       },
       relationTo: 'media',
       required: true,

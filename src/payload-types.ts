@@ -161,6 +161,9 @@ export interface Page {
   id: string;
   title: string;
   hero: {
+    /**
+     * Full Background works for either a photo or a video — pick it for the main landing hero.
+     */
     type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact';
     richText?: {
       root: {
@@ -201,6 +204,9 @@ export interface Page {
           id?: string | null;
         }[]
       | null;
+    /**
+     * A photo or a video both work here — pick whichever from your Media library.
+     */
     media?: (string | null) | Media;
   };
   layout: (
