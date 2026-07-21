@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 
+import { SectionDivider } from '@/components/SectionDivider'
+
 import { ArchiveBlock } from '@/blocks/ArchiveBlock/Component'
 import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { ColumnsBlock } from '@/blocks/Columns/Component'
@@ -45,13 +47,16 @@ export const RenderBlocks: React.FC<{
 
             if (Block) {
               return (
-                <div className="my-16" key={index}>
-                  <Block
-                    {...block}
-                    disableInnerContainer
-                    {...(nested ? { enableGutter: false } : {})}
-                  />
-                </div>
+                <Fragment key={index}>
+                  {!nested && index > 0 ? <SectionDivider /> : null}
+                  <div className="my-16">
+                    <Block
+                      {...block}
+                      disableInnerContainer
+                      {...(nested ? { enableGutter: false } : {})}
+                    />
+                  </div>
+                </Fragment>
               )
             }
           }
