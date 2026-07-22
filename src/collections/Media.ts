@@ -43,6 +43,11 @@ export const Media: CollectionConfig = {
     read: anyone,
     update: authenticated,
   },
+  admin: {
+    components: {
+      beforeList: ['/components/Media/UploadWithProgress'],
+    },
+  },
   hooks: {
     afterChange: [revalidateMedia],
     afterDelete: [revalidateMediaDelete],
