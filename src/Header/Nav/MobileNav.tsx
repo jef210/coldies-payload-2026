@@ -20,13 +20,17 @@ export const MobileNav: React.FC<{
   const pathname = usePathname()
   const [mounted, setMounted] = useState(false)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const closedByNavigationRef = useRef(false)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
   // Close automatically whenever the route actually changes underneath it.
+  // Marked so the focus-restoration below knows not to pull focus back to the
+  // trigger button - the user has deliberately moved on to a new page.
   useEffect(() => {
+    closedByNavigationRef.current = true
     onClose()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])
@@ -34,6 +38,7 @@ export const MobileNav: React.FC<{
   useEffect(() => {
     if (!isOpen) return
 
+    closedByNavigationRef.current = false
     const previouslyFocused = document.activeElement as HTMLElement | null
     closeButtonRef.current?.focus()
 
@@ -48,7 +53,9 @@ export const MobileNav: React.FC<{
     return () => {
       document.body.style.overflow = originalOverflow
       document.removeEventListener('keydown', onKeyDown)
-      previouslyFocused?.focus()
+      if (!closedByNavigationRef.current) {
+        previouslyFocused?.focus()
+      }
     }
   }, [isOpen, onClose])
 
