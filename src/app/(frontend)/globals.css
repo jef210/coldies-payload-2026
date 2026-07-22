@@ -218,6 +218,7 @@
 html {
   scroll-behavior: smooth;
   opacity: 0;
+  overflow-x: hidden;
 }
 
 html[data-theme='dark'],
@@ -227,6 +228,7 @@ html[data-theme='light'] {
 
 body {
   position: relative;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(245, 122, 53, 0.12), transparent 26%),
     radial-gradient(circle at 80% 20%, rgba(118, 78, 255, 0.1), transparent 30%),
