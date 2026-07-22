@@ -54,7 +54,7 @@ export const EventsPreviewBlock: React.FC<EventsPreviewBlockProps> = async ({
     <section className="container my-20 md:my-28" data-reveal="up">
       <div className="mb-8 max-w-3xl">
         <p className="mb-3 text-xs uppercase tracking-[0.32em] text-muted-foreground">Live</p>
-        <h2 className="text-3xl md:text-5xl">{heading}</h2>
+        <h2 className="section-heading">{heading}</h2>
         {description ? (
           <p className="mt-4 text-base text-muted-foreground md:text-lg">{description}</p>
         ) : null}

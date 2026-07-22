@@ -141,7 +141,7 @@ export const YouTubeEmbedBlock = async ({
     <section className={cn(enableGutter && 'container my-20 md:my-28')} data-reveal="fade">
       <div className="mb-6 max-w-3xl">
         <p className="mb-3 text-xs uppercase tracking-[0.32em] text-muted-foreground">Listen</p>
-        {heading ? <h2 className="text-3xl md:text-5xl">{heading}</h2> : null}
+        {heading ? <h2 className="section-heading">{heading}</h2> : null}
       </div>
 
       <div className="relative w-full overflow-hidden rounded-[1.5rem] border border-border/60 bg-black shadow-[0_30px_100px_-45px_rgba(0,0,0,0.85)]">

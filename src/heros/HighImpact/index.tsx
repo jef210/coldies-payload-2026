@@ -17,11 +17,11 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText 
 
   return (
     <div
-      className="page-hero-shell relative flex min-h-[88vh] items-center justify-center overflow-hidden text-white"
+      className="page-hero-shell relative flex min-h-[70svh] items-center justify-center overflow-hidden text-white md:min-h-[88vh]"
       data-theme="dark"
     >
       <div
-        className="container z-10 relative flex items-center justify-center py-32 md:py-40"
+        className="container z-10 relative flex items-center justify-center py-16 md:py-32 lg:py-40"
         data-reveal="up"
       >
         <div className="max-w-[36.5rem] md:text-center">
