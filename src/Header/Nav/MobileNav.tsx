@@ -55,7 +55,13 @@ export const MobileNav: React.FC<{
   if (!mounted) return null
 
   return createPortal(
-    <div aria-hidden={!isOpen} className="fixed inset-0 z-[60] overflow-hidden md:hidden">
+    <div
+      aria-hidden={!isOpen}
+      className={cn(
+        'fixed inset-0 z-[60] overflow-hidden md:hidden',
+        isOpen ? 'pointer-events-auto' : 'pointer-events-none',
+      )}
+    >
       <div
         className={cn(
           'absolute inset-0 bg-black/50 transition-opacity duration-300 motion-reduce:transition-none',
