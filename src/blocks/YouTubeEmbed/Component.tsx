@@ -7,6 +7,8 @@ import type { YouTubeEmbedBlock as YouTubeEmbedBlockProps } from '@/payload-type
 import { cn } from '@/utilities/ui'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 
+import { VideoPlayer } from './VideoPlayer'
+
 const normalizeYouTubeId = (value: string): string => {
   const trimmedValue = value.trim()
 
@@ -146,13 +148,7 @@ export const YouTubeEmbedBlock = async ({
 
       <div className="relative w-full overflow-hidden rounded-[1.5rem] border border-border/60 bg-black shadow-[0_30px_100px_-45px_rgba(0,0,0,0.85)]">
         {isDirectVideo ? (
-          <video
-            className="h-full w-full"
-            controls
-            poster={posterURL}
-            preload="metadata"
-            src={videoId}
-          />
+          <VideoPlayer className="h-full w-full" poster={posterURL} src={videoId} />
         ) : (
           <div className="pt-[56.25%]">
             <iframe
