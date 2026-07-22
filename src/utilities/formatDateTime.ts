@@ -1,20 +1,15 @@
+// The Coldies are based in Denver/Boulder - dates are always shown in this
+// timezone regardless of where the server (or a visitor) happens to be, so
+// a date picked in the admin always displays as the same calendar day.
+const EVENT_TIME_ZONE = 'America/Denver'
+
 export const formatDateTime = (timestamp: string): string => {
-  const now = new Date()
-  let date = now
-  if (timestamp) date = new Date(timestamp)
-  const months = date.getMonth()
-  const days = date.getDate()
-  // const hours = date.getHours();
-  // const minutes = date.getMinutes();
-  // const seconds = date.getSeconds();
+  const date = timestamp ? new Date(timestamp) : new Date()
 
-  const MM = months + 1 < 10 ? `0${months + 1}` : months + 1
-  const DD = days < 10 ? `0${days}` : days
-  const YYYY = date.getFullYear()
-  // const AMPM = hours < 12 ? 'AM' : 'PM';
-  // const HH = hours > 12 ? hours - 12 : hours;
-  // const MinMin = (minutes < 10) ? `0${minutes}` : minutes;
-  // const SS = (seconds < 10) ? `0${seconds}` : seconds;
-
-  return `${MM}/${DD}/${YYYY}`
+  return new Intl.DateTimeFormat('en-US', {
+    day: '2-digit',
+    month: '2-digit',
+    timeZone: EVENT_TIME_ZONE,
+    year: 'numeric',
+  }).format(date)
 }
