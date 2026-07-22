@@ -40,10 +40,27 @@ export const MobileNav: React.FC<{
 
     closedByNavigationRef.current = false
     const previouslyFocused = document.activeElement as HTMLElement | null
-    closeButtonRef.current?.focus()
 
+    // Deferred until the slide-in transition finishes - focusing the close
+    // button while it's still transitioning in from off-screen can make the
+    // browser attempt to scroll it into view mid-animation, adding a second
+    // source of jumpiness on top of the transition itself.
+    const focusTimeout = window.setTimeout(() => {
+      closeButtonRef.current?.focus()
+    }, 300)
+
+    // Locking scroll by hiding the scrollbar shifts the whole page sideways
+    // by the scrollbar's width the instant it disappears (visible scrollbars
+    // only - most mobile browsers already use overlay scrollbars with zero
+    // width, so this is a no-op there). Compensate with matching padding so
+    // nothing jumps.
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
     const originalOverflow = document.body.style.overflow
+    const originalPaddingRight = document.body.style.paddingRight
     document.body.style.overflow = 'hidden'
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`
+    }
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') onClose()
@@ -51,7 +68,9 @@ export const MobileNav: React.FC<{
     document.addEventListener('keydown', onKeyDown)
 
     return () => {
+      window.clearTimeout(focusTimeout)
       document.body.style.overflow = originalOverflow
+      document.body.style.paddingRight = originalPaddingRight
       document.removeEventListener('keydown', onKeyDown)
       if (!closedByNavigationRef.current) {
         previouslyFocused?.focus()
