@@ -14,6 +14,10 @@ const NEXT_PUBLIC_SERVER_URL =
     : process.env.__NEXT_PRIVATE_ORIGIN || 'http://localhost:3000')
 
 const nextConfig: NextConfig = {
+  // withPayload adds its own "X-Powered-By: Next.js, Payload" header unless
+  // this is explicitly false - no reason to advertise the exact stack to
+  // anyone probing the site.
+  poweredByHeader: false,
   images: {
     qualities: [100],
     remotePatterns: [
