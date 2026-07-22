@@ -14,7 +14,7 @@ const VenueLogo: React.FC<{
   websiteURL?: string | null
 }> = ({ logo, websiteURL }) => {
   const image = (
-    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-muted/40 md:h-28 md:w-28">
+    <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-muted/40 md:h-28 md:w-28">
       <Media fill imgClassName="object-contain p-2" resource={logo} />
     </div>
   )
@@ -64,18 +64,22 @@ export const EventsPreviewBlock: React.FC<EventsPreviewBlockProps> = async ({
         {events.length > 0 ? (
           events.map((event) => {
             const location = [event.venue, event.city].filter(Boolean).join(' · ')
+            const hasLogo = Boolean(event.venueLogo && typeof event.venueLogo === 'object')
 
             return (
               <article
-                className="group grid grid-cols-1 items-center gap-6 rounded-[1.2rem] border border-border/60 bg-card/45 p-6 shadow-[0_25px_80px_-44px_rgba(0,0,0,0.9)] backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 md:grid-cols-[auto_1fr] md:gap-8"
+                className="group grid grid-cols-[auto_1fr] items-center gap-4 rounded-[1.2rem] border border-border/60 bg-card/45 p-6 shadow-[0_25px_80px_-44px_rgba(0,0,0,0.9)] backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 md:gap-8"
                 key={event.id}
                 style={{ transitionDelay: `${Math.min(240, events.indexOf(event) * 90)}ms` }}
               >
-                {event.venueLogo && typeof event.venueLogo === 'object' ? (
-                  <VenueLogo logo={event.venueLogo} websiteURL={event.venueWebsiteURL} />
+                {hasLogo ? (
+                  <VenueLogo
+                    logo={event.venueLogo as Extract<Event['venueLogo'], object>}
+                    websiteURL={event.venueWebsiteURL}
+                  />
                 ) : null}
 
-                <div>
+                <div className={hasLogo ? '' : 'col-span-2'}>
                   <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
                     {formatDateTime(event.eventDate)}
                   </p>
